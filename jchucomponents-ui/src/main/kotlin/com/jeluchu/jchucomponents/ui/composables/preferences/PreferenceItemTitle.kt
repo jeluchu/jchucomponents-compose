@@ -8,11 +8,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jeluchu.jchucomponents.ktx.colors.applyOpacity
+import com.jeluchu.jchucomponents.ktx.colors.opacity
 
 @Composable
 internal fun PreferenceItemTitle(
@@ -31,7 +30,7 @@ internal fun PreferenceItemTitle(
         maxLines = maxLines,
         fontSize = fontSize,
         style = style,
-        color = color.applyOpacity(enabled),
+        color = color.opacity(enabled),
         overflow = overflow
     )
 }
@@ -53,7 +52,7 @@ internal fun PreferenceItemDescription(
         maxLines = maxLines,
         fontSize = fontSize,
         style = style,
-        color = color.applyOpacity(enabled),
+        color = color.opacity(enabled),
         overflow = overflow
     )
 }

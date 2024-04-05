@@ -1,7 +1,6 @@
 package com.jeluchu.jchucomponents.ktx.utils
 
 object IbanUtils {
-
     private const val REG = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     private const val STRING_DOUBLE_ZERO = "00"
     private const val STRING_ZERO = "0"
@@ -29,8 +28,5 @@ object IbanUtils {
         return m
     }
 
-    private fun getNumIban(letter: String): Int{
-        return REG.indexOf(letter) + 10
-    }
-
+    private fun getNumIban(letter: String) = REG.indexOf(letter) + 10
 }

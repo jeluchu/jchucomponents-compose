@@ -28,7 +28,6 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 fun SystemStatusBarColors(
     statusBarColor: Color,
     systemBarsColor: Color,
-    isNavigationBarContrastEnforced: Boolean = true,
     useDarkIcons: Boolean = !isSystemInDarkTheme()
 ) = with(rememberSystemUiController()) {
     SideEffect {

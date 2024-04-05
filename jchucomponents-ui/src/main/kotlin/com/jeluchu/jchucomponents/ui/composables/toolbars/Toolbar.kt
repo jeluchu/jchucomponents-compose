@@ -9,8 +9,10 @@ package com.jeluchu.jchucomponents.ui.composables.toolbars
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -38,9 +40,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.jeluchu.jchucomponents.ktx.compose.toImageVector
 import com.jeluchu.jchucomponents.ktx.strings.empty
 import com.jeluchu.jchucomponents.ui.R
+import com.jeluchu.jchucomponents.ui.composables.column.ScrollableColumn
 import com.jeluchu.jchucomponents.ui.extensions.modifier.noRippleClickable
+import com.jeluchu.jchucomponents.ui.foundation.icon.IconLink
 
 @Composable
 fun Toolbar(
@@ -143,6 +148,27 @@ fun Toolbar(
     }
 )
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun Toolbar(
+    title: @Composable () -> Unit,
+    modifier: Modifier = Modifier,
+    navigationIcon: @Composable () -> Unit = {},
+    actions: @Composable RowScope.() -> Unit = {},
+    colors: CenterToolbarColors = CenterToolbarColors()
+) = TopAppBar(
+    title = title,
+    actions = actions,
+    modifier = modifier,
+    navigationIcon = navigationIcon,
+    colors = TopAppBarDefaults.topAppBarColors(
+        containerColor = colors.containerColor,
+        titleContentColor = colors.contentColor,
+        actionIconContentColor = colors.contentColor,
+        navigationIconContentColor = colors.contentColor
+    )
+)
+
 @Immutable
 class TopBarSettings constructor(
     @DrawableRes val navIcon: Int = R.drawable.ic_arrow_left,
@@ -156,23 +182,49 @@ class TopBarSettings constructor(
 @Preview
 @Composable
 fun ToolbarActionsPreview() {
-    Toolbar(
-        modifier = Modifier,
-        title = "Villagers",
-        topBarSettings = TopBarSettings(
-            actionIcon = R.drawable.ic_btn_qrcode
-        ),
-        navigateToCustomAction = { },
-        navigateToBackScreen = { }
-    )
-}
+    ScrollableColumn(
+        verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+        Toolbar(
+            modifier = Modifier,
+            title = "Villagers",
+            topBarSettings = TopBarSettings(
+                actionIcon = R.drawable.ic_btn_qrcode
+            ),
+            navigateToCustomAction = { },
+            navigateToBackScreen = { }
+        )
 
-@Preview
-@Composable
-fun ToolbarPreview() {
-    Toolbar(
-        modifier = Modifier,
-        title = "Villagers",
-        navigateToBackScreen = { }
-    )
+        Toolbar(
+            modifier = Modifier,
+            title = "Villagers",
+            navigateToBackScreen = { }
+        )
+
+        Toolbar(
+            modifier = Modifier,
+            title = { Text(text = "Villagers") },
+            navigationIcon = {
+                IconLink(
+                    imageVector = R.drawable.ic_btn_qrcode.toImageVector(),
+                    contentDescription = "ToolbarTest",
+                    tint = Color.DarkGray,
+                    onClick = {}
+                )
+            }
+        )
+
+        Toolbar(
+            modifier = Modifier,
+            title = { Text(text = "Villagers") },
+            actions = {
+                IconLink(
+                    imageVector = R.drawable.ic_btn_qrcode.toImageVector(),
+                    contentDescription = "ToolbarTest",
+                    tint = Color.DarkGray,
+                    onClick = {}
+                )
+            }
+        )
+    }
 }

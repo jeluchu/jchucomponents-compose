@@ -15,7 +15,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
@@ -25,17 +24,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.jeluchu.jchucomponents.ui.R
 import com.jeluchu.jchucomponents.ui.runtime.remember.rememberMutableStateOf
-import com.jeluchu.jchucomponents.ui.themes.glaucous
 
 @Composable
 fun ProgressIndicatorButton(
     modifier: Modifier = Modifier,
-    isLoading: Boolean = false,
     text: String,
     icon: ImageVector,
-    textSyle: TextStyle = MaterialTheme.typography.bodyLarge,
+    isLoading: Boolean = false,
     fontSize: TextUnit = 16.sp,
-    tint: Color = glaucous,
+    textSyle: TextStyle = MaterialTheme.typography.bodyLarge,
     colors: ButtonColors = ButtonDefaults.filledTonalButtonColors(),
     onClick: () -> Unit,
 ) = FilledTonalButton(
@@ -51,20 +48,17 @@ fun ProgressIndicatorButton(
                     .size(16.dp)
                     .align(Alignment.Center),
                 strokeWidth = 3.dp,
-                color = tint
             )
         }
     else Icon(
         imageVector = icon,
         contentDescription = null,
         modifier = Modifier.size(18.dp),
-        tint = tint
     )
     Text(
         text = text,
         modifier = Modifier.padding(start = 8.dp),
         style = textSyle,
-        color = tint,
         fontSize = fontSize
     )
 }

@@ -1,0 +1,254 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>LuminanceSource</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            JchuComponents
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":jchucomponents-qr:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="jchucomponents-qr::com.jeluchu.qr/LuminanceSource///PointingToDeclaration//-148163597">
+  <div class="breadcrumbs"><a href="../../index.html">jchucomponents-qr</a><span class="delimiter">/</span><a href="../index.html">com.jeluchu.qr</a><span class="delimiter">/</span><span class="current">LuminanceSource</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Luminance</span><wbr><span><span>Source</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">LuminanceSource</a></div><p class="paragraph">The purpose of this class hierarchy is to abstract different bitmap implementations across platforms into a standard interface for requesting greyscale luminance values. The interface only provides immutable methods; therefore crop and rotation create copies. This is to ensure that one Reader does not modify the original luminance source and leave it in an unknown state for other Readers in the chain.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">dswitkin@google.com (Daniel Switkin)</p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-inverted-luminance-source/index.html">InvertedLuminanceSource</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-2132472549%2FProperties%2F-148163597" anchor-label="height" id="-2132472549%2FProperties%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="height.html"><span><span>height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2132472549%2FProperties%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="height.html">height</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="908092484%2FProperties%2F-148163597" anchor-label="isCropSupported" id="908092484%2FProperties%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-crop-supported.html"><span>is</span><wbr><span>Crop</span><wbr><span><span>Supported</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="908092484%2FProperties%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="is-crop-supported.html">isCropSupported</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1263634673%2FProperties%2F-148163597" anchor-label="isRotateSupported" id="-1263634673%2FProperties%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-rotate-supported.html"><span>is</span><wbr><span>Rotate</span><wbr><span><span>Supported</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1263634673%2FProperties%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="is-rotate-supported.html">isRotateSupported</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1189005249%2FProperties%2F-148163597" anchor-label="matrix" id="1189005249%2FProperties%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="matrix.html"><span><span>matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1189005249%2FProperties%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="matrix.html">matrix</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Fetches luminance data for the underlying bitmap. Values should be fetched using: <code class="lang-kotlin">int luminance = array[y * width + x] &amp; 0xff</code></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1553201294%2FProperties%2F-148163597" anchor-label="width" id="-1553201294%2FProperties%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="width.html"><span><span>width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1553201294%2FProperties%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="width.html">width</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1021540173%2FFunctions%2F-148163597" anchor-label="crop" id="1021540173%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="crop.html"><span><span>crop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1021540173%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="crop.html"><span class="token function">crop</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">left<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">top<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">LuminanceSource</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns a new object with cropped image data. Implementations may keep a reference to the original data rather than a copy. Only callable if isCropSupported() is true.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1019442436%2FFunctions%2F-148163597" anchor-label="getRow" id="1019442436%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-row.html"><span>get</span><wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1019442436%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="get-row.html"><span class="token function">getRow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">row<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></div><div class="brief "><p class="paragraph">Fetches one row of luminance data from the underlying platform's bitmap. Values range from 0 (black) to 255 (white). Because Java does not have an unsigned byte type, callers will have to bitwise and with 0xff for each value. It is preferable for implementations of this method to only fetch this row rather than the whole image, since no 2D Readers may be installed and getMatrix() may never be called.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="276238668%2FFunctions%2F-148163597" anchor-label="invert" id="276238668%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="invert.html"><span><span>invert</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="276238668%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="invert.html"><span class="token function">invert</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">LuminanceSource</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="336992497%2FFunctions%2F-148163597" anchor-label="rotateCounterClockwise" id="336992497%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rotate-counter-clockwise.html"><span>rotate</span><wbr><span>Counter</span><wbr><span><span>Clockwise</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="336992497%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="rotate-counter-clockwise.html"><span class="token function">rotateCounterClockwise</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">LuminanceSource</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns a new object with rotated image data by 90 degrees counterclockwise. Only callable if .isRotateSupported is true.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2067580784%2FFunctions%2F-148163597" anchor-label="rotateCounterClockwise45" id="-2067580784%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rotate-counter-clockwise45.html"><span>rotate</span><wbr><span>Counter</span><wbr><span><span>Clockwise45</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2067580784%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="rotate-counter-clockwise45.html"><span class="token function">rotateCounterClockwise45</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">LuminanceSource</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns a new object with rotated image data by 45 degrees counterclockwise. Only callable if .isRotateSupported is true.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="190594614%2FFunctions%2F-148163597" anchor-label="toString" id="190594614%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="190594614%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

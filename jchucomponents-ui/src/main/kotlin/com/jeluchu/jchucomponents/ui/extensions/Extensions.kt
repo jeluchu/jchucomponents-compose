@@ -11,7 +11,7 @@ fun Context.getBitmapFromVectorDrawable(
     width: Int?,
     height: Int?,
     drawableId: Int
-): Bitmap? {
+): Bitmap {
     val drawable = ContextCompat.getDrawable(this, drawableId)
     val bitmap = Bitmap.createBitmap(
         width ?: drawable?.intrinsicWidth ?: 1,

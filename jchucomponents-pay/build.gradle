@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'org.jetbrains.dokka'
     id 'kotlin-android'
     id 'maven-publish'
 }
@@ -42,7 +43,7 @@ afterEvaluate {
                 from components.release
                 groupId = "com.github.jeluchu"
                 artifactId = "jchucomponents-pay"
-                version = "1.5.0"
+                version = "2.0.0-alpha04"
             }
         }
     }

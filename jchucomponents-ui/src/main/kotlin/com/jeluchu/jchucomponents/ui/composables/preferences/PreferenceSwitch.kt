@@ -21,7 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.jeluchu.jchucomponents.ktx.colors.applyOpacity
+import com.jeluchu.jchucomponents.ktx.colors.opacity
 
 @Composable
 fun PreferenceSwitch(
@@ -63,7 +63,7 @@ fun PreferenceSwitch(
                     modifier = Modifier
                         .padding(start = 8.dp, end = 16.dp)
                         .size(24.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant.applyOpacity(enabled)
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant.opacity(enabled)
                 )
             }
             Column(

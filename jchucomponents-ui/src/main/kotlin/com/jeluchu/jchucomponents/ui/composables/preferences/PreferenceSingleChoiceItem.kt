@@ -12,32 +12,37 @@ import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jeluchu.jchucomponents.ui.themes.artichoke
+import com.jeluchu.jchucomponents.ui.extensions.modifier.cornerRadius
 
 @Composable
 fun PreferenceSingleChoiceItem(
     modifier: Modifier = Modifier,
     text: String,
-    color: Color = MaterialTheme.colorScheme.onSurface,
-    style: TextStyle = MaterialTheme.typography.titleLarge,
     selected: Boolean,
-    radioButtonColor: Color = artichoke,
+    shape: Shape = 15.cornerRadius(),
+    style: TextStyle = MaterialTheme.typography.titleLarge,
+    colors: PreferenceChoiceColors = PreferenceChoiceColors(),
     contentPadding: PaddingValues = PaddingValues(horizontal = 8.dp, vertical = 18.dp),
     onClick: () -> Unit
 ) = Surface(
     modifier = Modifier.selectable(
         selected = selected,
         onClick = onClick
-    )
+    ),
+    shape = shape,
+    contentColor = colors.contentColor,
+    color = colors.containerColor
 ) {
     Row(
         modifier = modifier
@@ -54,7 +59,6 @@ fun PreferenceSingleChoiceItem(
                 text = text,
                 maxLines = 1,
                 style = style.copy(fontSize = 16.sp),
-                color = color,
                 overflow = TextOverflow.Ellipsis
             )
         }
@@ -62,8 +66,8 @@ fun PreferenceSingleChoiceItem(
             selected = selected,
             onClick = onClick,
             colors = RadioButtonDefaults.colors(
-                selectedColor = radioButtonColor,
-                unselectedColor = radioButtonColor
+                selectedColor = colors.selectedRadioColor,
+                unselectedColor = colors.unselectedRadioColor
             ),
             modifier = Modifier
                 .padding()
@@ -71,6 +75,15 @@ fun PreferenceSingleChoiceItem(
         )
     }
 }
+
+@Immutable
+class PreferenceChoiceColors(
+    val selectedRadioColor: Color = Color.DarkGray,
+    val unselectedRadioColor: Color = Color.DarkGray,
+    val containerColor: Color = Color.White,
+    val contentColor: Color = Color.DarkGray
+)
+
 
 @Preview
 @Composable

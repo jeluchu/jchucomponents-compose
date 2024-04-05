@@ -16,7 +16,6 @@ import kotlin.math.floor
 import kotlin.math.sqrt
 
 
-
 /**
  *
  * [Bitmap] Extension to show the original [Bitmap] that we pass from
@@ -31,7 +30,6 @@ import kotlin.math.sqrt
 fun Bitmap?.orEmpty(
     defaultValue: Bitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888)
 ): Bitmap = this ?: defaultValue
-
 
 /**
  *
@@ -56,9 +54,9 @@ fun ImageBitmap?.orEmpty(
  * @param bitmap the bitmap
  * @return the string
  */
-fun bitmapToBase64(bitmap: Bitmap): String? {
+fun Bitmap.toBase64(): String? {
     val byteArrayOutputStream = ByteArrayOutputStream()
-    bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
+    compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
     val byteArray: ByteArray = byteArrayOutputStream.toByteArray()
     return Base64.encodeToString(byteArray, Base64.DEFAULT)
 }
@@ -68,9 +66,7 @@ fun Bitmap.scaleBitmap(maxBytes: Long = SIZE_2MB_BYTES.toLong()): Bitmap? {
     val currentHeight = this.height
     val currentPixels = currentWidth * currentHeight
     val maxPixels = maxBytes / 4
-    if (currentPixels <= maxPixels) {
-        return this
-    }
+    if (currentPixels <= maxPixels) return this
     val scaleFactor = sqrt(maxPixels / currentPixels.toDouble())
     val newWidthPx = floor(currentWidth * scaleFactor).toInt()
     val newHeightPx = floor(currentHeight * scaleFactor).toInt()

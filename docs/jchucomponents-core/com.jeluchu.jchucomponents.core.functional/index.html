@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.jeluchu.jchucomponents.core.functional</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            JchuComponents
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":jchucomponents-core:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="jchucomponents-core::com.jeluchu.jchucomponents.core.functional////PointingToDeclaration//-815226443">
+  <div class="breadcrumbs"><a href="../index.html">jchucomponents-core</a><span class="delimiter">/</span><span class="current">com.jeluchu.jchucomponents.core.functional</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="999857484%2FClasslikes%2F-815226443" anchor-label="Either" id="999857484%2FClasslikes%2F-815226443" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-core:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-either/index.html"><span><span>Either</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="999857484%2FClasslikes%2F-815226443"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-either/index.html">Either</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-either/index.html">L</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-either/index.html">R</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Represents a value of one of two possible types (a disjoint union). Instances of <a href="-either/index.html">Either</a> are either an instance of <a href="-either/-left/index.html">Left</a> or <a href="-either/-right/index.html">Right</a>. FP Convention dictates that <a href="-either/-left/index.html">Left</a> is used for "failure" and <a href="-either/-right/index.html">Right</a> is used for "success".</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1795820593%2FFunctions%2F-815226443" anchor-label="c" id="-1795820593%2FFunctions%2F-815226443" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-core:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="c.html"><span><span>c</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1795820593%2FFunctions%2F-815226443"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="c.html">A</a><span class="token punctuation">, </span><a href="c.html">B</a><span class="token punctuation">, </span><a href="c.html">C</a><span class="token operator">&gt; </span><span class="token punctuation">(</span><a href="c.html">A</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="c.html">B</a><span class="token punctuation">.</span><a href="c.html"><span class="token function">c</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">f<span class="token operator">: </span><span class="token punctuation">(</span><a href="c.html">B</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="c.html">C</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span class="token punctuation">(</span><a href="c.html">A</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="c.html">C</a></div><div class="brief "><p class="paragraph">Composes 2 functions See <a href="https://proandroiddev.com/kotlins-nothing-type-946de7d464fb">Credits to Alex Hart.</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-275795085%2FFunctions%2F-815226443" anchor-label="flatMap" id="-275795085%2FFunctions%2F-815226443" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-core:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="flat-map.html"><span>flat</span><wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-275795085%2FFunctions%2F-815226443"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="flat-map.html">T</a><span class="token punctuation">, </span><a href="flat-map.html">L</a><span class="token punctuation">, </span><a href="flat-map.html">R</a><span class="token operator">&gt; </span><a href="-either/index.html">Either</a><span class="token operator">&lt;</span><a href="flat-map.html">L</a><span class="token punctuation">, </span><a href="flat-map.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="flat-map.html"><span class="token function">flatMap</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fn<span class="token operator">: </span><span class="token punctuation">(</span><a href="flat-map.html">R</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="-either/index.html">Either</a><span class="token operator">&lt;</span><a href="flat-map.html">L</a><span class="token punctuation">, </span><a href="flat-map.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-either/index.html">Either</a><span class="token operator">&lt;</span><a href="flat-map.html">L</a><span class="token punctuation">, </span><a href="flat-map.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Right-biased flatMap() FP convention which means that Right is assumed to be the default case to operate on. If it is Left, operations like map, flatMap, ... return the Left value unchanged.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-109815540%2FFunctions%2F-815226443" anchor-label="getOrElse" id="-109815540%2FFunctions%2F-815226443" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-core:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-or-else.html"><span>get</span><wbr><span>Or</span><wbr><span><span>Else</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-109815540%2FFunctions%2F-815226443"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-or-else.html">L</a><span class="token punctuation">, </span><a href="get-or-else.html">R</a><span class="token operator">&gt; </span><a href="-either/index.html">Either</a><span class="token operator">&lt;</span><a href="get-or-else.html">L</a><span class="token punctuation">, </span><a href="get-or-else.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="get-or-else.html"><span class="token function">getOrElse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="get-or-else.html">R</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-or-else.html">R</a></div><div class="brief "><p class="paragraph">Returns the value from this <code class="lang-kotlin">Right</code> or the given argument if this is a <code class="lang-kotlin">Left</code>. Right(12).getOrElse(17) RETURNS 12 and Left(12).getOrElse(17) RETURNS 17</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1712007850%2FFunctions%2F-815226443" anchor-label="map" id="1712007850%2FFunctions%2F-815226443" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-core:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="map.html"><span><span>map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1712007850%2FFunctions%2F-815226443"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="map.html">T</a><span class="token punctuation">, </span><a href="map.html">L</a><span class="token punctuation">, </span><a href="map.html">R</a><span class="token operator">&gt; </span><a href="-either/index.html">Either</a><span class="token operator">&lt;</span><a href="map.html">L</a><span class="token punctuation">, </span><a href="map.html">R</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="map.html"><span class="token function">map</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fn<span class="token operator">: </span><span class="token punctuation">(</span><a href="map.html">R</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="map.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-either/index.html">Either</a><span class="token operator">&lt;</span><a href="map.html">L</a><span class="token punctuation">, </span><a href="map.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Right-biased map() FP convention which means that Right is assumed to be the default case to operate on. If it is Left, operations like map, flatMap, ... return the Left value unchanged.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

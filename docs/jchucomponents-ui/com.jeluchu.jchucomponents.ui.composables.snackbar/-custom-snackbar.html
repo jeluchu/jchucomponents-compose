@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CustomSnackbar</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            JchuComponents
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":jchucomponents-ui:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="jchucomponents-ui::com.jeluchu.jchucomponents.ui.composables.snackbar//CustomSnackbar/#androidx.compose.material.SnackbarData#androidx.compose.ui.Modifier#kotlin.Boolean#androidx.compose.ui.text.TextStyle#androidx.compose.ui.graphics.Shape#androidx.compose.ui.graphics.Color#androidx.compose.ui.graphics.Color#androidx.compose.ui.graphics.Color#androidx.compose.ui.unit.Dp/PointingToDeclaration//-1428189280">
+  <div class="breadcrumbs"><a href="../index.html">jchucomponents-ui</a><span class="delimiter">/</span><a href="index.html">com.jeluchu.jchucomponents.ui.composables.snackbar</a><span class="delimiter">/</span><span class="current">CustomSnackbar</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Custom</span><wbr><span><span>Snackbar</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-ui:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="-custom-snackbar.html"><span class="token function">CustomSnackbar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">snackbarData<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/material/SnackbarData.html">SnackbarData</a><span class="token punctuation">, </span></span><span class="parameter ">modifier<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/Modifier.html">Modifier</a><span class="token operator"> = </span>Modifier<span class="token punctuation">, </span></span><span class="parameter ">actionOnNewLine<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">textStyle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token operator"> = </span>MaterialTheme.typography.h3<span class="token punctuation">, </span></span><span class="parameter ">shape<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Shape.html">Shape</a><span class="token operator"> = </span>MaterialTheme.shapes.small<span class="token punctuation">, </span></span><span class="parameter ">backgroundColor<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>SnackbarDefaults.backgroundColor<span class="token punctuation">, </span></span><span class="parameter ">contentColor<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>MaterialTheme.colors.surface<span class="token punctuation">, </span></span><span class="parameter ">actionColor<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/graphics/Color.html">Color</a><span class="token operator"> = </span>SnackbarDefaults.primaryActionColor<span class="token punctuation">, </span></span><span class="parameter ">elevation<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/unit/Dp.html">Dp</a><span class="token operator"> = </span>6.dp</span></span><span class="token punctuation">)</span></div><p class="paragraph"><a href="https://material.io/components/snackbars" class="external" target="_blank">Material Design snackbar</a>.</p><p class="paragraph">Snackbars provide brief messages about app processes at the bottom of the screen.</p><p class="paragraph">Snackbars inform users of a process that an app has performed or will perform. They appear temporarily, towards the bottom of the screen. They shouldn’t interrupt the user experience, and they don’t require user input to disappear.</p><p class="paragraph">A Snackbar can contain a single action. Because they disappear automatically, the action shouldn't be "Dismiss" or "Cancel".</p><p class="paragraph"><img alt="Snackbars image" src="https://developer.android.com/images/reference/androidx/compose/material/snackbars.png"></p><p class="paragraph">This version of snackbar is designed to work with <a href="https://developer.android.com/reference/kotlin/androidx/compose/material/SnackbarData.html">SnackbarData</a> provided by the <a href="https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary.html">SnackbarHost</a>, which is usually used inside of the <a href="https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary.html">Scaffold</a>.</p><p class="paragraph">This components provides only the visuals of the <a href="-snackbar.html">Snackbar</a>. If you need to show a <a href="-snackbar.html">Snackbar</a> with defaults on the screen, use <a href="https://developer.android.com/reference/kotlin/androidx/compose/material/ScaffoldState.html#snackbarhoststate">ScaffoldState.snackbarHostState</a> and <a href="https://developer.android.com/reference/kotlin/androidx/compose/material/SnackbarHostState.html#showsnackbar">SnackbarHostState.showSnackbar</a>:</p><p class="paragraph">If you want to customize appearance of the <a href="-snackbar.html">Snackbar</a>, you can pass your own version as a child of the <a href="https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary.html">SnackbarHost</a> to the <a href="https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary.html">Scaffold</a>:</p><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":jchucomponents-ui:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-ui:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>snackbar</span><wbr><span><span>Data</span></span></u></div></span></div><div><div class="title"><p class="paragraph">data about the current snackbar showing via <a href="https://developer.android.com/reference/kotlin/androidx/compose/material/SnackbarHostState.html">SnackbarHostState</a></p></div></div></div></div><div class="table-row" data-filterable-current=":jchucomponents-ui:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-ui:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>modifier</span></span></u></div></span></div><div><div class="title"><p class="paragraph">modifiers for the Snackbar layout</p></div></div></div></div><div class="table-row" data-filterable-current=":jchucomponents-ui:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-ui:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>action</span><wbr><span>On</span><wbr><span>New</span><wbr><span><span>Line</span></span></u></div></span></div><div><div class="title"><p class="paragraph">whether or not action should be put on the separate line. Recommended for action with long action text</p></div></div></div></div><div class="table-row" data-filterable-current=":jchucomponents-ui:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-ui:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>shape</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Defines the Snackbar's shape as well as its shadow</p></div></div></div></div><div class="table-row" data-filterable-current=":jchucomponents-ui:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-ui:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>background</span><wbr><span><span>Color</span></span></u></div></span></div><div><div class="title"><p class="paragraph">background color of the Snackbar</p></div></div></div></div><div class="table-row" data-filterable-current=":jchucomponents-ui:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-ui:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>content</span><wbr><span><span>Color</span></span></u></div></span></div><div><div class="title"><p class="paragraph">color of the content to use inside the snackbar. Defaults to either the matching content color for <a href="-custom-snackbar.html">backgroundColor</a>, or, if it is not a color from the theme, this will keep the same value set above this Surface.</p></div></div></div></div><div class="table-row" data-filterable-current=":jchucomponents-ui:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-ui:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>action</span><wbr><span><span>Color</span></span></u></div></span></div><div><div class="title"><p class="paragraph">color of the action</p></div></div></div></div><div class="table-row" data-filterable-current=":jchucomponents-ui:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-ui:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>elevation</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The z-coordinate at which to place the SnackBar. This controls the size of the shadow below the SnackBar</p></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

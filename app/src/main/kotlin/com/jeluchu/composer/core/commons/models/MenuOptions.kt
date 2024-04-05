@@ -8,7 +8,7 @@ data class MenuOptions(
     val name: String
 ) {
     companion object {
-        val dashboard = listOf(
+        val ui = listOf(
             MenuOptions(
                 id = DestinationsIds.buttons,
                 name = Names.buttons
@@ -16,6 +16,18 @@ data class MenuOptions(
             MenuOptions(
                 id = DestinationsIds.progress,
                 name = Names.progress
+            ),
+            MenuOptions(
+                id = DestinationsIds.lazyGrids,
+                name = Names.lazyGrids
+            ),
+            MenuOptions(
+                id = DestinationsIds.dividers,
+                name = Names.dividers
+            ),
+            MenuOptions(
+                id = DestinationsIds.toolbars,
+                name = Names.toolbars
             ),
         )
 
@@ -35,6 +47,28 @@ data class MenuOptions(
                 id = DestinationsIds.iconProgress,
                 name = Names.iconProgress
             )
+        )
+
+        val lazyGrids = listOf(
+            MenuOptions(
+                id = DestinationsIds.lazyStaticGrids,
+                name = Names.lazyStaticGrids
+            ),
+        )
+
+        val toolbars = listOf(
+            MenuOptions(
+                id = DestinationsIds.simpleToolbars,
+                name = Names.toolbars
+            ),
+            MenuOptions(
+                id = DestinationsIds.centerToolbars,
+                name = Names.centerToolbars
+            ),
+            MenuOptions(
+                id = DestinationsIds.largeToolbars,
+                name = Names.largeToolbars
+            ),
         )
     }
 }

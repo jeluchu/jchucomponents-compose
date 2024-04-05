@@ -6,6 +6,7 @@
 
 plugins {
     id 'com.android.library'
+    id 'org.jetbrains.dokka'
     id 'kotlin-android'
     id 'maven-publish'
 }
@@ -39,7 +40,6 @@ android {
 dependencies {
     implementation(libs.bundles.core.androidx)
     implementation(libs.bundles.core.squareup)
-    implementation(libs.bundles.core.firebase)
     implementation(libs.bundles.core.jetbrains)
 }
 
@@ -50,7 +50,7 @@ afterEvaluate {
                 from components.release
                 groupId = "com.github.jeluchu"
                 artifactId = "jchucomponents-core"
-                version = "1.8.5"
+                version = "2.0.0-alpha04"
             }
         }
     }

@@ -3,8 +3,8 @@
 package com.jeluchu.jchucomponents.ui.foundation.icon
 
 import androidx.annotation.StringRes
-import androidx.compose.material.Icon
-import androidx.compose.material.LocalContentColor
+import androidx.compose.material3.Icon
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.NonRestartableComposable
 import androidx.compose.ui.Modifier

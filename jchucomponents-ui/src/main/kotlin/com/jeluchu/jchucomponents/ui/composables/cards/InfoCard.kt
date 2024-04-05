@@ -118,13 +118,14 @@ fun InfoCard(
     )
 }
 
-@Preview
+@Preview(backgroundColor = 0xFFFFFFFF, showBackground = true)
 @Composable
 fun InfoCardPreviewLight() {
     InfoCard(
         text = "Info",
         icon = R.drawable.ic_up_arrow,
         modifier = Modifier,
-        color = Color.White
+        color = Color.DarkGray,
+        tint = Color.DarkGray
     )
 }

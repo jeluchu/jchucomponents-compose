@@ -1,6 +1,6 @@
 package com.jeluchu.jchucomponents.ktx.calendar
 
-import java.util.*
+import java.util.Calendar
 
 var Calendar.year: Int
     get() = get(Calendar.YEAR)
@@ -20,17 +20,14 @@ var Calendar.day: Int
         set(Calendar.DAY_OF_MONTH, value)
     }
 
-fun Calendar.previousYear() = if (get(Calendar.MONTH) == Calendar.JANUARY) {
-    get(Calendar.YEAR) - 2
-} else get(Calendar.YEAR) - 1
+fun Calendar.previousYear() = if (get(Calendar.MONTH) == Calendar.JANUARY) get(Calendar.YEAR) - 2
+else get(Calendar.YEAR) - 1
 
-fun Calendar.previousMonth() = if (get(Calendar.MONTH) == Calendar.JANUARY) {
-    Calendar.DECEMBER
-} else get(Calendar.MONTH) - 1
+fun Calendar.previousMonth() = if (get(Calendar.MONTH) == Calendar.JANUARY) Calendar.DECEMBER
+else get(Calendar.MONTH) - 1
 
-fun Calendar.nextMonth() = if (get(Calendar.MONTH) == Calendar.DECEMBER) {
-    Calendar.JANUARY
-} else get(Calendar.MONTH) + 1
+fun Calendar.nextMonth() = if (get(Calendar.MONTH) == Calendar.DECEMBER) Calendar.JANUARY
+else get(Calendar.MONTH) + 1
 
 fun Calendar.setLastDayOfMonth() = apply {
     add(Calendar.MONTH, 1)

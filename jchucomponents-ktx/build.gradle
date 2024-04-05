@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'org.jetbrains.dokka'
     id 'kotlin-android'
     id 'maven-publish'
 }
@@ -15,7 +16,7 @@ android {
     }
 
     buildFeatures.compose = true
-    composeOptions.kotlinCompilerExtensionVersion = "1.5.1"
+    composeOptions.kotlinCompilerExtensionVersion = "1.5.8"
 
     buildTypes {
         release {
@@ -45,7 +46,7 @@ afterEvaluate {
                 from components.release
                 groupId = "com.github.jeluchu"
                 artifactId = "jchucomponents-ktx"
-                version = "1.8.5"
+                version = "2.0.0-alpha04"
             }
         }
     }

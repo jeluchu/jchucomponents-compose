@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jeluchu.jchucomponents.ktx.colors.applyOpacity
+import com.jeluchu.jchucomponents.ktx.colors.opacity
 import com.jeluchu.jchucomponents.ktx.strings.empty
 import com.jeluchu.jchucomponents.ui.R
 import com.jeluchu.jchucomponents.ui.composables.chips.Type
@@ -46,14 +46,14 @@ fun CategoryCard(
     modifier = modifier
         .height(110.dp)
         .clip(16.cornerRadius())
-        .background(backgroundColor.applyOpacity(enabled))
+        .background(backgroundColor.opacity(enabled))
         .clickable(onClick = onClick)
         .padding(10.dp)
 ) {
     Icon(
         imageVector = ImageVector.vectorResource(id = icon),
         contentDescription = String.empty(),
-        tint = textColor.applyOpacity(enabled),
+        tint = textColor.opacity(enabled),
         modifier = Modifier
             .size(35.dp)
             .align(Alignment.TopStart)
@@ -63,7 +63,7 @@ fun CategoryCard(
         modifier = Modifier.align(Alignment.BottomEnd),
         text = title,
         colors = TypeColors(
-            container = textColor.applyOpacity(enabled)
+            container = textColor.opacity(enabled)
         ),
         fontSize = fontSize,
         style = textStyle

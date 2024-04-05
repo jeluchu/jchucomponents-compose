@@ -6,7 +6,6 @@
 
 package com.jeluchu.jchucomponents.ui.foundation.canva
 
-import android.graphics.Bitmap
 import androidx.compose.foundation.Canvas
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -37,10 +36,6 @@ fun CanvasBackground(
             context.getBitmapFromVectorDrawable(
                 with, height,
                 drawable
-            )?.asImageBitmap() ?: Bitmap.createBitmap(
-                1,
-                1,
-                Bitmap.Config.ARGB_8888
             ).asImageBitmap()
 
         val paint = Paint().asFrameworkPaint().apply {
