@@ -1,0 +1,220 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Encoder</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            JchuComponents
+                    </a>            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":jchucomponents-qr:dokkaHtmlPartial/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="jchucomponents-qr::com.jeluchu.qr.qrcode.encoder/Encoder///PointingToDeclaration//-148163597">
+  <div class="breadcrumbs"><a href="../../index.html">jchucomponents-qr</a><span class="delimiter">/</span><a href="../index.html">com.jeluchu.qr.qrcode.encoder</a><span class="delimiter">/</span><span class="current">Encoder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Encoder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Encoder</a></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="837068907%2FFunctions%2F-148163597" anchor-label="append8BitBytes" id="837068907%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="append8-bit-bytes.html"><span>append8Bit</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="837068907%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="append8-bit-bytes.html"><span class="token function">append8BitBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">content<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">bits<span class="token operator">: </span><a href="../../com.jeluchu.qr.common/-bit-array/index.html">BitArray</a><span class="token punctuation">, </span></span><span class="parameter ">encoding<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="790516499%2FFunctions%2F-148163597" anchor-label="appendAlphanumericBytes" id="790516499%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="append-alphanumeric-bytes.html"><span>append</span><wbr><span>Alphanumeric</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="790516499%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="append-alphanumeric-bytes.html"><span class="token function">appendAlphanumericBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">content<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html">CharSequence</a><span class="token punctuation">, </span></span><span class="parameter ">bits<span class="token operator">: </span><a href="../../com.jeluchu.qr.common/-bit-array/index.html">BitArray</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="652272%2FFunctions%2F-148163597" anchor-label="appendBytes" id="652272%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="append-bytes.html"><span>append</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="652272%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="append-bytes.html"><span class="token function">appendBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">content<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">mode<span class="token operator">: </span><a href="../../com.jeluchu.qr.qrcode.decoder/-mode/index.html">Mode</a><span class="token punctuation">, </span></span><span class="parameter ">bits<span class="token operator">: </span><a href="../../com.jeluchu.qr.common/-bit-array/index.html">BitArray</a><span class="token punctuation">, </span></span><span class="parameter ">encoding<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append "bytes" in "mode" mode (encoding) into "bits". On success, store the result in "bits".</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1014409519%2FFunctions%2F-148163597" anchor-label="appendKanjiBytes" id="-1014409519%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="append-kanji-bytes.html"><span>append</span><wbr><span>Kanji</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1014409519%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="append-kanji-bytes.html"><span class="token function">appendKanjiBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">content<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">bits<span class="token operator">: </span><a href="../../com.jeluchu.qr.common/-bit-array/index.html">BitArray</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1656866789%2FFunctions%2F-148163597" anchor-label="appendLengthInfo" id="1656866789%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="append-length-info.html"><span>append</span><wbr><span>Length</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1656866789%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="append-length-info.html"><span class="token function">appendLengthInfo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">numLetters<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">version<span class="token operator">: </span><a href="../../com.jeluchu.qr.qrcode.decoder/-version/index.html">Version</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">mode<span class="token operator">: </span><a href="../../com.jeluchu.qr.qrcode.decoder/-mode/index.html">Mode</a><span class="token punctuation">, </span></span><span class="parameter ">bits<span class="token operator">: </span><a href="../../com.jeluchu.qr.common/-bit-array/index.html">BitArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append length info. On success, store the result in "bits".</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2110090901%2FFunctions%2F-148163597" anchor-label="encode" id="2110090901%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="encode.html"><span><span>encode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2110090901%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">fun </span><a href="encode.html"><span class="token function">encode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">content<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">ecLevel<span class="token operator">: </span><a href="../../com.jeluchu.qr.qrcode.decoder/-error-correction-level/index.html">ErrorCorrectionLevel</a><span class="token punctuation">, </span></span><span class="parameter ">hints<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-hash-map/index.html">HashMap</a><span class="token operator">&lt;</span><a href="../../com.jeluchu.qr/-encode-hint-type/index.html">EncodeHintType</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-q-r-code/index.html">QRCode</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="640049582%2FFunctions%2F-148163597" anchor-label="getNumDataBytesAndNumECBytesForBlockID" id="640049582%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-num-data-bytes-and-num-e-c-bytes-for-block-i-d.html"><span>get</span><wbr><span>Num</span><wbr><span>Data</span><wbr><span>Bytes</span><wbr><span>And</span><wbr><span>Num</span><wbr><span>ECBytes</span><wbr><span>For</span><wbr><span>Block</span><wbr><span><span>ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="640049582%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-num-data-bytes-and-num-e-c-bytes-for-block-i-d.html"><span class="token function">getNumDataBytesAndNumECBytesForBlockID</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">numTotalBytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">numDataBytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">numRSBlocks<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">blockID<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">numDataBytesInBlock<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html">IntArray</a><span class="token punctuation">, </span></span><span class="parameter ">numECBytesInBlock<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html">IntArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Get number of data bytes and number of error correction bytes for block id "blockID". Store the result in "numDataBytesInBlock", and "numECBytesInBlock". See table 12 in 8.5.1 of JISX0510:2004 (p.30)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="941085781%2FFunctions%2F-148163597" anchor-label="interleaveWithECBytes" id="941085781%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="interleave-with-e-c-bytes.html"><span>interleave</span><wbr><span>With</span><wbr><span><span>ECBytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="941085781%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="interleave-with-e-c-bytes.html"><span class="token function">interleaveWithECBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bits<span class="token operator">: </span><a href="../../com.jeluchu.qr.common/-bit-array/index.html">BitArray</a><span class="token punctuation">, </span></span><span class="parameter ">numTotalBytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">numDataBytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">numRSBlocks<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.jeluchu.qr.common/-bit-array/index.html">BitArray</a></div><div class="brief "><p class="paragraph">Interleave "bits" with corresponding error correction bytes. On success, store the result in "result". The interleave rule is complicated. See 8.6 of JISX0510:2004 (p.37) for details.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-43763086%2FFunctions%2F-148163597" anchor-label="terminateBits" id="-43763086%2FFunctions%2F-148163597" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":jchucomponents-qr:dokkaHtmlPartial/release" data-filterable-set=":jchucomponents-qr:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="terminate-bits.html"><span>terminate</span><wbr><span><span>Bits</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-43763086%2FFunctions%2F-148163597"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":jchucomponents-qr:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="terminate-bits.html"><span class="token function">terminateBits</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">numDataBytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">bits<span class="token operator">: </span><a href="../../com.jeluchu.qr.common/-bit-array/index.html">BitArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Terminate bits as described in 8.4.8 and 8.4.9 of JISX0510:2004 (p.24).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

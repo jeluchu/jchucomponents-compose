@@ -43,11 +43,12 @@ val previousVersionsDirectory = project.rootProject.projectDir.resolve("previous
 tasks.dokkaHtmlMultiModule {
     pluginConfiguration<VersioningPlugin, VersioningConfiguration> {
         version = currentVersion
-        olderVersionsDir = file(previousVersionsDirectory)
+        //olderVersionsDir = file(previousVersionsDirectory)
         moduleName.set("JchuComponents")
+        outputDirectory.set(file("docs"))
     }
     pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
-        customAssets = listOf(file("documentation/logo-icon.svg"))
+        customAssets = listOf(file("docs/assets/logo-icon.svg"))
         footerMessage = "© 2024 - Jéluchu"
     }
 }
