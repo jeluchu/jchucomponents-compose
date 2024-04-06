@@ -6,10 +6,10 @@ androidx-navigation = "2.7.7"
 com-google-accompanist = "0.32.0"
 com-squareup-okhttp3 = "4.12.0"
 com-squareup-retrofit2 = "2.9.0"
-io-coil-kt = "2.6.0"
+coil-kt = "2.6.0"
+coil-gif = "2.5.0"
 org-jetbrains-kotlin = "1.9.22"
 org-jetbrains-kotlinx = "1.8.0"
-billing-ktx = "6.0.1"
 
 [libraries]
 androidx-datastore = "androidx.datastore:datastore-preferences:1.0.0"
@@ -42,12 +42,13 @@ com-squareup-okhttp3-logging-interceptor = { module = "com.squareup.okhttp3:logg
 com-squareup-okhttp3-okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "com-squareup-okhttp3" }
 com-squareup-retrofit2-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "com-squareup-retrofit2" }
 com-squareup-retrofit2-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "com-squareup-retrofit2" }
-io-coil-kt-coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "io-coil-kt" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-kt" }
+coil-gif = { module = "io.coil-kt:coil-gif", version.ref = "coil-gif" }
 org-jetbrains-kotlin-kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "org-jetbrains-kotlin" }
 org-jetbrains-kotlinx-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "org-jetbrains-kotlinx" }
 org-jetbrains-kotlinx-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "org-jetbrains-kotlinx" }
-com-android-billingclient-billing-ktx = { module = "com.android.billingclient:billing-ktx", version.ref = "billing-ktx" }
 androidx-appcompat = "androidx.appcompat:appcompat:1.6.1"
+revenuecat = "com.revenuecat.purchases:purchases:6.9.3"
 
 [bundles]
 core-androidx = [
@@ -74,7 +75,8 @@ ktx-google = [
     "com-google-code-gson",
 ]
 ktx-third-party = [
-    "io-coil-kt-coil-compose",
+    "coil-compose",
+    "coil-gif"
 ]
 # FOR JCHUCOMPONENTS QR
 qr-androidx = [
@@ -102,11 +104,11 @@ ui-compose = [
     "androidx-compose-ui",
     "androidx-compose-ui-ui-tooling",
     "androidx-navigation-navigation-compose",
-    "io-coil-kt-coil-compose",
+    "coil-compose",
 ]
 # FOR JCHUCOMPONENTS PAY
 pay-android = [
-    "com-android-billingclient-billing-ktx"
+    "revenuecat"
 ]
 pay-jetbrains = [
     "org-jetbrains-kotlinx-kotlinx-coroutines-android",

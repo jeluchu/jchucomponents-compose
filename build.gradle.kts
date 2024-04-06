@@ -37,7 +37,7 @@ plugins {
     id("org.jetbrains.dokka") version "1.9.20" apply true
 }
 
-val currentVersion = "2.0.0-alpha04"
+val currentVersion = "2.0.0-alpha05"
 val previousVersionsDirectory = project.rootProject.projectDir.resolve("previousDocVersions").invariantSeparatorsPath
 
 tasks.dokkaHtmlMultiModule {

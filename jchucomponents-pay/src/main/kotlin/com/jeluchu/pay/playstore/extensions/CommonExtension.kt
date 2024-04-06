@@ -3,9 +3,11 @@ package com.jeluchu.pay.playstore.extensions
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.Purchase
+import java.math.RoundingMode
 
-fun String.Companion.empty() = ""
-
+internal fun String.Companion.empty() = ""
+internal fun Float.roundTo(n: Int): Float = toBigDecimal().setScale(n, RoundingMode.UP).toFloat()
+internal fun Double.roundTo(n: Int): Double = toBigDecimal().setScale(n, RoundingMode.UP).toDouble()
 
 /**
  * Determine if purchaseState is purchased ([Purchase.PurchaseState.PURCHASED])
