@@ -1,8 +1,6 @@
 package com.jeluchu.pay.playstore
 
 import android.content.Context
-import com.jeluchu.pay.playstore.Payment.PaymentProducts.ANNUAL_ID
-import com.jeluchu.pay.playstore.Payment.PaymentProducts.MONTHLY_ID
 import com.jeluchu.pay.playstore.extensions.empty
 import com.jeluchu.pay.playstore.extensions.findActivity
 import com.jeluchu.pay.playstore.extensions.roundTo
@@ -12,6 +10,7 @@ import com.jeluchu.pay.playstore.models.SubscriptionInfo
 import com.jeluchu.pay.playstore.models.SubscriptionState
 import com.jeluchu.pay.playstore.models.SubscriptionsType
 import com.revenuecat.purchases.CustomerInfo
+import com.revenuecat.purchases.LogLevel
 import com.revenuecat.purchases.Package
 import com.revenuecat.purchases.PackageType
 import com.revenuecat.purchases.PurchaseParams
@@ -50,9 +49,11 @@ object Payment {
     fun init(
         context: Context,
         apiKey: String,
+        isDebug: Boolean,
         subscriptionName: String
     ) {
         subName = subscriptionName
+        if (isDebug) Purchases.logLevel = LogLevel.DEBUG
         Purchases.configure(PurchasesConfiguration.Builder(context, apiKey).build())
     }
 
@@ -63,14 +64,14 @@ object Payment {
 
     fun purchase(
         context: Context,
-        type: PackageType,
+        type: ProductsType,
         onSuccess: (Boolean, String) -> Unit = { _, _ -> },
         onFailure: (PurchasesError, Boolean) -> Unit = { _, _ -> }
     ) = context.findActivity()?.let { activity ->
         billingInfo.value.packages.apply {
             if (isNotEmpty()) {
                 Purchases.sharedInstance.purchaseWith(
-                    PurchaseParams.Builder(activity, first { it.packageType == type }).build(),
+                    PurchaseParams.Builder(activity, first { it.packageType == type.packageType }).build(),
                     onError = { error, userCancelled -> onFailure(error, userCancelled) },
                     onSuccess = { _, customerInfo -> activateSubscription(customerInfo, onSuccess) }
                 )
@@ -198,8 +199,8 @@ object Payment {
     }
 
     private fun buildSubscriptionProducts(products: List<Package>): List<Product> {
-        val monthly = products.find { it.identifier == MONTHLY_ID }
-        val annual = products.find { it.identifier == ANNUAL_ID }
+        val monthly = products.find { it.identifier == ProductsType.MONTHLY.type }
+        val annual = products.find { it.identifier == ProductsType.ANNUAL.type }
 
         if (monthly != null && annual != null) {
             val annualPricePerMonth = (annual.product.price.amountMicros.toDouble() / 1000000) / 12
@@ -249,8 +250,8 @@ object Payment {
 
         return SubscriptionInfo(
             renewalType = when {
-                product?.identifier == MONTHLY_ID -> SubscriptionsType.MONTHLY
-                product?.identifier == ANNUAL_ID -> SubscriptionsType.YEARLY
+                product?.identifier == ProductsType.MONTHLY.type -> SubscriptionsType.MONTHLY
+                product?.identifier == ProductsType.ANNUAL.type -> SubscriptionsType.YEARLY
                 PaymentProducts.promos.find { prom -> customerInfo.activeSubscriptions.find { it == prom } != null } != null -> {
                     isPromotional = true
                     SubscriptionsType.PROMO
@@ -307,9 +308,12 @@ object Payment {
         })
     }
 
+    enum class ProductsType(val type: String, val packageType: PackageType) {
+        ANNUAL("\$rc_annual", PackageType.ANNUAL),
+        MONTHLY("\$rc_monthly", PackageType.MONTHLY),
+    }
+
     object PaymentProducts {
-        const val ANNUAL_ID = "\$rc_annual"
-        const val MONTHLY_ID = "\$rc_monthly"
         val promos = listOf(
             "rc_promo_pro_daily",
             "rc_promo_pro_three_day",
