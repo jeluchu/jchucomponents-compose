@@ -15,7 +15,6 @@ import java.io.ByteArrayOutputStream
 import kotlin.math.floor
 import kotlin.math.sqrt
 
-
 /**
  *
  * [Bitmap] Extension to show the original [Bitmap] that we pass from

@@ -50,4 +50,4 @@ fun Activity.generateQr(
     }
 }
 
-fun String.Companion.empty() = ""
+internal fun String.Companion.empty() = ""

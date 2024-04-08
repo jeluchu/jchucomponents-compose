@@ -13,8 +13,6 @@ import java.lang.reflect.Type
 
 val gson: Gson by lazy { GsonBuilder().disableHtmlEscaping().create() }
 
-fun Any?.toJson(): String? = gson.toJson(this)
-
 /** Convert a String to an Object **/
 inline fun <reified T> String.toObject(): T {
     val type = typeToken<T>()
