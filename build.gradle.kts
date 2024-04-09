@@ -1,6 +1,5 @@
 import org.jetbrains.dokka.base.DokkaBase
 import org.jetbrains.dokka.base.DokkaBaseConfiguration
-import org.jetbrains.dokka.gradle.DokkaTask
 import org.jetbrains.dokka.versioning.VersioningConfiguration
 import org.jetbrains.dokka.versioning.VersioningPlugin
 
@@ -37,7 +36,7 @@ plugins {
     id("org.jetbrains.dokka") version "1.9.20" apply true
 }
 
-val currentVersion = "2.0.0-alpha07"
+val currentVersion = "2.0.0-alpha08"
 val previousVersionsDirectory = project.rootProject.projectDir.resolve("previousDocVersions").invariantSeparatorsPath
 
 tasks.dokkaHtmlMultiModule {

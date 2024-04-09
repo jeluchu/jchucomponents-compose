@@ -46,7 +46,7 @@ afterEvaluate {
                 from components.release
                 groupId = "com.github.jeluchu"
                 artifactId = "jchucomponents-ktx"
-                version = "2.0.0-alpha07"
+                version = "2.0.0-alpha08"
             }
         }
     }
