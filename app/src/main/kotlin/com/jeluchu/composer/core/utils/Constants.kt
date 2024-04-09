@@ -19,6 +19,9 @@ object DestinationsIds {
     const val simpleToolbars = "toolbars"
     const val centerToolbars = "centerToolbars"
     const val largeToolbars = "largeToolbars"
+
+    const val cards = "cards"
+    const val benefitCards = "benefitCards"
 }
 
 object NavigationIds {
@@ -27,6 +30,7 @@ object NavigationIds {
     const val lazyGrids = "lazyGridsNav"
     const val dividers = "dividersNav"
     const val toolbars = "toolbarsNav"
+    const val cards = "cardsNav"
 }
 
 object Names {
@@ -41,4 +45,6 @@ object Names {
     const val toolbars = "Toolbars"
     const val centerToolbars = "CenterToolbars"
     const val largeToolbars = "LargeToolbars"
+    const val cards = "Cards"
+    const val benefitCards = "BenefitCards"
 }

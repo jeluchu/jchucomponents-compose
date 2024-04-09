@@ -49,14 +49,12 @@ com.jeluchu.jchucomponents.ktx.time
 com.jeluchu.jchucomponents.ktx.uri
 com.jeluchu.jchucomponents.ktx.utils
 module:jchucomponents-pay
-com.jeluchu.pay.playstore
-com.jeluchu.pay.playstore.enums
-com.jeluchu.pay.playstore.extensions
-com.jeluchu.pay.playstore.models
-com.jeluchu.pay.playstore.utils
+com.jeluchu.pay.revenuecat
+com.jeluchu.pay.revenuecat.extensions
+com.jeluchu.pay.revenuecat.models
+com.jeluchu.pay.revenuecat.utils
 module:jchucomponents-prefs
 com.jeluchu.prefs.datastore
-com.jeluchu.prefs.extensions
 com.jeluchu.prefs.sharedprefs
 module:jchucomponents-qr
 com.jeluchu.qr
@@ -74,7 +72,6 @@ com.jeluchu.jchucomponents.ui.animations.lists
 com.jeluchu.jchucomponents.ui.animations.navigation
 com.jeluchu.jchucomponents.ui.animations.splash
 com.jeluchu.jchucomponents.ui.composables.accessibility
-com.jeluchu.jchucomponents.ui.composables.benefits
 com.jeluchu.jchucomponents.ui.composables.button
 com.jeluchu.jchucomponents.ui.composables.cards
 com.jeluchu.jchucomponents.ui.composables.chips

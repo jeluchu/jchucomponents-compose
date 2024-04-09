@@ -6,26 +6,34 @@
 
 package com.jeluchu.jchucomponents.ui.composables.cards
 
+import androidx.annotation.DrawableRes
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.jeluchu.jchucomponents.ktx.strings.empty
+import com.jeluchu.jchucomponents.ktx.compose.toImageVector
 import com.jeluchu.jchucomponents.ui.R
 import com.jeluchu.jchucomponents.ui.composables.images.NetworkImage
+import com.jeluchu.jchucomponents.ui.extensions.modifier.cornerRadius
+import com.jeluchu.jchucomponents.ui.themes.Spacing.sizeSpacing06
+import com.jeluchu.jchucomponents.ui.themes.Spacing.sizeSpacing10
 
 /**
  *
@@ -34,40 +42,38 @@ import com.jeluchu.jchucomponents.ui.composables.images.NetworkImage
  * Component displaying
  * information on a custom-designed card
  *
- * @param modifier modifier that will be used to change the color, size...
- * @param text text to be displayed on the card
- * @param color color of text that appears on Card
- * @param url link of the image you want to be displayed on Card
+ * @param modifier [Modifier] modifier that will be used to change the color, size...
+ * @param text [String] for text to be displayed on the card
+ * @param image [String] for image to be displayed on the card
+ * @param contentColor [Color] color of text that appears on Card
+ * @param style [TextStyle] is used to customize the style of text displayed
  *
  */
 @Composable
 fun InfoCard(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     text: String,
-    url: String = String.empty(),
-    color: Color = Color.Gray,
+    image: String,
+    contentColor: Color = Color.Gray,
+    style: TextStyle = MaterialTheme.typography.bodySmall
 ) = Row(
     modifier = modifier,
-    verticalAlignment = Alignment.CenterVertically
+    verticalAlignment = Alignment.CenterVertically,
+    horizontalArrangement = Arrangement.spacedBy(sizeSpacing10)
 ) {
     NetworkImage(
+        url = image,
         contentScale = ContentScale.Fit,
-        modifier = Modifier.size(34.dp),
-        url = url
+        modifier = Modifier.size(34.dp)
     )
 
     Text(
         text = text,
-        modifier = Modifier.padding(
-            start = 12.dp,
-            top = 6.dp,
-            bottom = 6.dp
-        ),
-        color = color,
-        fontSize = 13.sp,
+        style = style,
+        color = contentColor,
+        textAlign = TextAlign.Start,
         fontWeight = FontWeight.Bold,
-        style = MaterialTheme.typography.overline,
-        textAlign = TextAlign.Start
+        modifier = Modifier.padding(vertical = sizeSpacing06)
     )
 }
 
@@ -78,54 +84,66 @@ fun InfoCard(
  * Component displaying
  * information on a custom-designed card
  *
- * @param modifier modifier that will be used to change the color, size...
- * @param text text to be displayed on the card
- * @param color color of text that appears on Card
- * @param icon drawable id of the resource you want to be displayed as an icon on Card
- * @param tint color of the icon displayed on Card
+ * @param modifier [Modifier] modifier that will be used to change the color, size...
+ * @param text [String] text to be displayed on the card
+ * @param icon [DrawableRes] drawable id of the resource you want to be displayed as an icon on Card
+ * @param tint [Color] color of the icon displayed on Card
  *
  */
 @Composable
 fun InfoCard(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     text: String,
+    @DrawableRes icon: Int,
     color: Color = Color.Gray,
-    icon: Int = 0,
-    tint: Color = Color.White
+    tint: Color = Color.White,
+    style: TextStyle = MaterialTheme.typography.bodySmall
 ) = Row(
     modifier = modifier,
-    verticalAlignment = Alignment.CenterVertically
+    verticalAlignment = Alignment.CenterVertically,
+    horizontalArrangement = Arrangement.spacedBy(sizeSpacing10)
 ) {
     Icon(
-        modifier = Modifier.size(20.dp),
-        painter = painterResource(id = icon),
         tint = tint,
-        contentDescription = null
+        contentDescription = null,
+        modifier = Modifier.size(18.dp),
+        imageVector = icon.toImageVector()
     )
 
     Text(
         text = text,
-        modifier = Modifier.padding(
-            start = 12.dp,
-            top = 6.dp,
-            bottom = 6.dp
-        ),
         color = color,
-        fontSize = 13.sp,
+        style = style,
+        textAlign = TextAlign.Start,
         fontWeight = FontWeight.Bold,
-        style = MaterialTheme.typography.overline,
-        textAlign = TextAlign.Start
+        modifier = Modifier.padding(vertical = sizeSpacing06)
     )
 }
 
 @Preview(backgroundColor = 0xFFFFFFFF, showBackground = true)
 @Composable
 fun InfoCardPreviewLight() {
-    InfoCard(
-        text = "Info",
-        icon = R.drawable.ic_up_arrow,
-        modifier = Modifier,
-        color = Color.DarkGray,
-        tint = Color.DarkGray
-    )
+    Column {
+        InfoCard(
+            text = "Info",
+            icon = R.drawable.ic_up_arrow,
+            modifier = Modifier,
+            color = Color.DarkGray,
+            tint = Color.DarkGray
+        )
+
+        InfoCard(
+            text = "Info",
+            icon = R.drawable.ic_up_arrow,
+            modifier = Modifier
+                .clip(10.cornerRadius())
+                .background(Color.Blue.copy(.4f))
+                .padding(
+                    vertical = 5.dp,
+                    horizontal = 10.dp
+                ),
+            color = Color.DarkGray,
+            tint = Color.DarkGray
+        )
+    }
 }

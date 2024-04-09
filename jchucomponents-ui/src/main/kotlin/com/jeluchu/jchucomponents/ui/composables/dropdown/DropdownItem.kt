@@ -100,14 +100,14 @@ fun DropdownItemOption(
 }
 
 @Immutable
-class DropdownItemIcon constructor(
+class DropdownItemIcon(
     val modifier: Modifier = Modifier,
     @DrawableRes val icon: Int = R.drawable.ic_btn_share,
     val tint: Color = Color.DarkGray
 )
 
 @Immutable
-class DropdownItemText constructor(
+class DropdownItemText(
     val modifier: Modifier = Modifier,
     val color: Color = Color.Unspecified,
     val fontSize: TextUnit = TextUnit.Unspecified,

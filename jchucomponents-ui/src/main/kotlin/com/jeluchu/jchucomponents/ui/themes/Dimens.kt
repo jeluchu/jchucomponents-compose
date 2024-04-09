@@ -6,8 +6,10 @@ import androidx.compose.ui.unit.dp
 object Spacing {
     val sizeSpacing02: Dp = 2.00.dp
     val sizeSpacing04: Dp = 4.00.dp
-    val sizeSpacing07: Dp = 8.00.dp
+    val sizeSpacing06: Dp = 6.00.dp
+    val sizeSpacing07: Dp = 7.00.dp
     val sizeSpacing08: Dp = 8.00.dp
+    val sizeSpacing10: Dp = 8.00.dp
     val sizeSpacing12: Dp = 12.00.dp
     val sizeSpacing16: Dp = 16.00.dp
     val sizeSpacing20: Dp = 20.00.dp

@@ -21,6 +21,8 @@ class Destinations(private val navController: NavHostController) {
     val goToSimpleToolbars: () -> Unit = { Feature.SIMPLE_TOOLBARS.route.navigate() }
     val goToCenterToolbars: () -> Unit = { Feature.CENTER_TOOBARS.route.navigate() }
     val goToLargeToolbars: () -> Unit = { Feature.LARGE_TOOBARS.route.navigate() }
+    val goToCards: () -> Unit = { Feature.CARDS.route.navigate() }
+    val goToBenefitCards: () -> Unit = { Feature.BENEFIT_CARDS.route.navigate() }
 
     val goBack: (from: NavBackStackEntry) -> Unit = { from ->
         if (from.lifecycleIsResumed()) navController.popBackStack()

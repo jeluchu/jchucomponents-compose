@@ -16,6 +16,7 @@ fun Navigation() = ProvideNavHostController { navHost ->
             lazyGridsNav(nav)
             dividersNav(nav)
             toolbarsNav(nav)
+            cardsNav(nav)
         }
     }
 }

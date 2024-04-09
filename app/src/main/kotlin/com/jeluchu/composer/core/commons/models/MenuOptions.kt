@@ -29,6 +29,10 @@ data class MenuOptions(
                 id = DestinationsIds.toolbars,
                 name = Names.toolbars
             ),
+            MenuOptions(
+                id = DestinationsIds.cards,
+                name = Names.cards
+            ),
         )
 
         val buttons = listOf(
@@ -68,6 +72,13 @@ data class MenuOptions(
             MenuOptions(
                 id = DestinationsIds.largeToolbars,
                 name = Names.largeToolbars
+            ),
+        )
+
+        val cards = listOf(
+            MenuOptions(
+                id = DestinationsIds.benefitCards,
+                name = Names.benefitCards
             ),
         )
     }

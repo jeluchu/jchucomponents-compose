@@ -6,8 +6,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Icon
-import androidx.compose.material.Surface
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.Modifier
@@ -17,6 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jeluchu.jchucomponents.ktx.compose.toImageVector
 import com.jeluchu.jchucomponents.ui.R
+import com.jeluchu.jchucomponents.ui.extensions.modifier.cornerRadius
 import com.jeluchu.jchucomponents.ui.themes.artichoke
 import com.jeluchu.jchucomponents.ui.themes.cosmicLatte
 
@@ -30,14 +31,15 @@ fun CategoryIcon(
 ) = Surface(
     modifier
         .size(60.dp)
-        .clip(RoundedCornerShape(15.dp))
-        .background(color = categoryIconColors.containerColor)
-        .clickable(onClick = onClick)
+        .clip(15.cornerRadius())
+        .clickable(onClick = onClick),
+    shape = 15.cornerRadius(),
+    color = categoryIconColors.containerColor,
+    contentColor = categoryIconColors.contentColor
 ) {
     Icon(
         modifier = Modifier.padding(16.dp),
         imageVector = icon.toImageVector(),
-        tint = categoryIconColors.contentColor,
         contentDescription = contentDescription
     )
 }

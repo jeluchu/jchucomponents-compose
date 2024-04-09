@@ -6,6 +6,8 @@ import com.jeluchu.composer.core.utils.DestinationsIds
 import com.jeluchu.composer.core.utils.NavigationIds
 import com.jeluchu.composer.features.bottons.view.ButtonsView
 import com.jeluchu.composer.features.bottons.view.FloatingButtonView
+import com.jeluchu.composer.features.cards.view.BenefitsView
+import com.jeluchu.composer.features.cards.view.CardsView
 import com.jeluchu.composer.features.dashboard.view.MainView
 import com.jeluchu.composer.features.dividers.view.DividersView
 import com.jeluchu.composer.features.lists.view.LazyGridsView
@@ -26,6 +28,7 @@ fun NavGraphBuilder.dashboardNav(nav: Destinations) {
                 DestinationsIds.lazyGrids -> nav.goToLazyGrids()
                 DestinationsIds.dividers -> nav.goToDividers()
                 DestinationsIds.toolbars -> nav.goToToolbars()
+                DestinationsIds.cards -> nav.goToCards()
             }
         }
     }
@@ -145,6 +148,30 @@ fun NavGraphBuilder.toolbarsNav(nav: Destinations) {
 
         composable(Feature.CENTER_TOOBARS.nav) {
             CenterToolbarActionsPreview()
+        }
+    }
+}
+
+fun NavGraphBuilder.cardsNav(nav: Destinations) {
+    navigation(
+        startDestination = Feature.CARDS.route,
+        route = NavigationIds.cards
+    ) {
+        composable(Feature.CARDS.nav) {
+            CardsView { id ->
+                when (id) {
+                    DestinationsIds.benefitCards -> nav.goToBenefitCards()
+                    DestinationsIds.back -> nav.goBack(it)
+                }
+            }
+        }
+
+        composable(Feature.BENEFIT_CARDS.nav) {
+            BenefitsView { id ->
+                when (id) {
+                    DestinationsIds.back -> nav.goBack(it)
+                }
+            }
         }
     }
 }
