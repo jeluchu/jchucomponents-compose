@@ -83,3 +83,6 @@ fun isFetchFifteenDays(lastFetchTime: Long): Boolean =
 
 fun isFetchTwentyDays(lastFetchTime: Long): Boolean =
     Date().time - lastFetchTime >= 480 * 60 * 60 * 1000
+
+fun isCustomTimePassed(lastFetchTime: Long, time: Long = 480 * 60 * 60 * 1000): Boolean =
+    Date().time - lastFetchTime >= time

@@ -3,6 +3,7 @@ package com.jeluchu.jchucomponents.ktx.compose
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
@@ -21,3 +22,6 @@ fun Int.toImageVector() = ImageVector.vectorResource(this)
 
 @Composable
 fun Int.toPainter() = painterResource(this)
+
+@Composable
+fun Int.toColor() = colorResource(this)

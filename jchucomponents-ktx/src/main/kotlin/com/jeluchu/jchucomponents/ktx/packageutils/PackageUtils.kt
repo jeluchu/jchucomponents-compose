@@ -54,3 +54,7 @@ inline val buildIsSAndUp: Boolean
 inline val buildIsTiramisuAndUp: Boolean
     @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.TIRAMISU)
     get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+
+inline val buildIsUpsideDownCakeAndUp: Boolean
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+    get() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
