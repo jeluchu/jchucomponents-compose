@@ -42,6 +42,7 @@ import com.jeluchu.jchucomponents.ui.themes.cosmicLatte
 
 @Composable
 fun FloatingButton(
+    modifier: Modifier = Modifier,
     enabled: Boolean = true,
     isVisible: Boolean = true,
     exit: ExitTransition = scaleOut(),
@@ -55,7 +56,7 @@ fun FloatingButton(
     exit = exit
 ) {
     FloatingActionButton(
-        modifier = Modifier.size(size.buttonSize),
+        modifier = modifier.size(size.buttonSize),
         containerColor = if (enabled) floatButton.background else floatButton.disabledBackground,
         elevation = FloatingActionButtonDefaults.elevation(
             defaultElevation = 0.dp,
@@ -74,7 +75,7 @@ fun FloatingButton(
 }
 
 @Immutable
-class FloatingButtonSettings constructor(
+class FloatingButtonSettings(
     @DrawableRes val icon: Int = R.drawable.ic_btn_share,
     val tint: Color = cosmicLatte,
     val background: Color = artichoke,
