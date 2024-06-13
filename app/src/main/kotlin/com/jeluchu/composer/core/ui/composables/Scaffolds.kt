@@ -13,8 +13,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.jeluchu.composer.core.ui.theme.milky
 import com.jeluchu.composer.core.ui.theme.secondary
-import com.jeluchu.jchucomponents.ktx.compose.toImageVector
-import com.jeluchu.jchucomponents.ktx.compose.toPainter
+import com.jeluchu.jchucomponents.ui.extensions.toImageVector
+import com.jeluchu.jchucomponents.ui.extensions.toPainter
 import com.jeluchu.jchucomponents.ui.R
 import com.jeluchu.jchucomponents.ui.composables.column.ScrollableColumn
 import com.jeluchu.jchucomponents.ui.composables.toolbars.CenterToolbarColors

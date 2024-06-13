@@ -16,7 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import coil.transform.Transformation
-import com.jeluchu.jchucomponents.ktx.compose.toPainter
+import com.jeluchu.jchucomponents.ui.extensions.toPainter
 import com.jeluchu.jchucomponents.ui.R
 
 /**

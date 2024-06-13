@@ -1,53 +1,25 @@
-import org.jetbrains.dokka.base.DokkaBase
-import org.jetbrains.dokka.base.DokkaBaseConfiguration
-import org.jetbrains.dokka.versioning.VersioningConfiguration
-import org.jetbrains.dokka.versioning.VersioningPlugin
-
-/*
- *
- *  Copyright 2022 Jeluchu
- *
- */
-
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath(libs.org.jetbrains.dokka)
-        classpath(libs.org.jetbrains.dokka.versioning)
-        classpath(libs.com.android.tools.build.gradle)
-        classpath(libs.org.jetbrains.kotlin.kotlin.gradle.plugin)
-    }
-}
-
-allprojects {
-    repositories {
-        gradlePluginPortal()
-        google()
-        mavenCentral()
-        maven("https://jitpack.io")
-    }
-}
+import org.jetbrains.dokka.gradle.*
 
 plugins {
-    id("org.jetbrains.dokka") version "1.9.20" apply true
+    alias(libs.plugins.jetbrains.dokka) apply false
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.jetbrains.kotlin) apply false
+    alias(libs.plugins.compose.compiler) apply false
 }
 
-val currentVersion = "2.0.0-alpha11"
-val previousVersionsDirectory = project.rootProject.projectDir.resolve("previousDocVersions").invariantSeparatorsPath
+tasks.withType<DokkaMultiModuleTask> {
+    val currentVersion = libs.versions.jchucomponents.get()
+    val previousVersionsDirectory = project.rootProject.projectDir.resolve("previousDocVersions").invariantSeparatorsPath
 
-tasks.dokkaHtmlMultiModule {
-    pluginConfiguration<VersioningPlugin, VersioningConfiguration> {
-        version = currentVersion
-        olderVersionsDir = file(previousVersionsDirectory)
-        moduleName.set("JchuComponents")
-        outputDirectory.set(file("docs"))
-    }
-    pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
-        customAssets = listOf(file("docs/assets/logo-icon.svg"))
-        footerMessage = "© 2024 - Jéluchu"
-    }
+    val versioningPlugin = "org.jetbrains.dokka.versioning.VersioningPlugin"
+    val configVersioning = """{ "version": "$currentVersion", "olderVersionsDir":"$previousVersionsDirectory" }"""
+
+    val dokkaConfig = "org.jetbrains.dokka.base.DokkaBase"
+    val configBase = """{ "customAssets": ${listOf(file("docs/assets/logo-icon.svg"))}, "footerMessage": "© 2024 - Jéluchu" }"""
+
+    val mapOf = mapOf(versioningPlugin to configVersioning, dokkaConfig to configBase)
+    outputDirectory.set(file(projectDir.toPath().resolve("docs/assets/logo-icon.svg").resolve(currentVersion)))
+    pluginsMapConfiguration.set(mapOf)
 }
+

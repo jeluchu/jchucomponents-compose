@@ -1,4 +1,4 @@
-package com.jeluchu.jchucomponents.ktx.compose
+package com.jeluchu.jchucomponents.ui.extensions
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable

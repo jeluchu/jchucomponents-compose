@@ -6,30 +6,12 @@
 
 package com.jeluchu.jchucomponents.ktx.numbers
 
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.ReadOnlyComposable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.unit.TextUnit
-import androidx.compose.ui.unit.dp
 import com.jeluchu.jchucomponents.ktx.constants.FIRST_DAY_OF_MONTH
 import com.jeluchu.jchucomponents.ktx.strings.empty
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
-import java.util.*
+import java.util.Calendar
 import kotlin.math.roundToInt
-
-inline val Int.dpToSp: TextUnit
-    @Composable @ReadOnlyComposable get() = LocalDensity.current.run { dp.toSp() }
-
-@Composable
-fun Int.height() = Spacer(modifier = Modifier.height(this.dp))
-
-@Composable
-fun Int.width() = Spacer(modifier = Modifier.width(this.dp))
 
 fun Int.Companion.empty() = 0
 fun Int?.orEmpty(defaultValue: Int = Int.empty()) = this ?: defaultValue

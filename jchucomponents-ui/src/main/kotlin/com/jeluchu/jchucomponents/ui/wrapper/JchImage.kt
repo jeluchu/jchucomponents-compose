@@ -10,8 +10,8 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.core.graphics.drawable.toBitmap
-import com.jeluchu.jchucomponents.ktx.compose.toImageVector
-import com.jeluchu.jchucomponents.ktx.compose.toPainter
+import com.jeluchu.jchucomponents.ui.extensions.toImageVector
+import com.jeluchu.jchucomponents.ui.extensions.toPainter
 import com.jeluchu.jchucomponents.ui.R
 
 /**

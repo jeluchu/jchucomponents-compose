@@ -1,16 +1,11 @@
-/*
- *
- *  Copyright 2022 Jeluchu
- *
- */
-
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin)
+    alias(libs.plugins.jetbrains.dokka)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
-
     compileSdk = 34
     defaultConfig {
         applicationId = "com.jeluchu.composer"
@@ -31,7 +26,6 @@ android {
     }
     
     buildFeatures.compose = true
-    composeOptions.kotlinCompilerExtensionVersion = "1.5.14"
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
