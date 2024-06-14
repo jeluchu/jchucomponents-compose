@@ -26,8 +26,35 @@ import java.util.Calendar
  */
 
 @Composable
-fun minutesLeft(): String {
+fun clock(): String {
+    var time by rememberMutableStateOf(currentTime())
 
+    LaunchedEffect(0) {
+        while (true) {
+            time = currentTime()
+            delay(1000)
+        }
+    }
+
+    return "${time.hours}:${time.minutes}"
+}
+
+@Composable
+fun clockTime(): Time {
+    var time by rememberMutableStateOf(currentTime())
+
+    LaunchedEffect(0) {
+        while (true) {
+            time = currentTime()
+            delay(1000)
+        }
+    }
+
+    return time
+}
+
+@Composable
+fun clockWithZoneDay(): String {
     var time by rememberMutableStateOf(currentTime())
 
     LaunchedEffect(0) {
