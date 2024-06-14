@@ -1,11 +1,6 @@
 package com.jeluchu.prefs.datastore
 
 import android.content.Context
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.platform.LocalContext
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -16,12 +11,9 @@ import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.jeluchu.prefs.extensions.empty
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -82,28 +74,28 @@ class DataStoreHelpers {
 
     fun getPreference(
         key: Preferences.Key<Int>,
-        default: Int = Int.empty()
+        default: Int = 0
     ) = runBlocking {
         dataStore?.data?.first()?.toPreferences()?.get(key) ?: default
     }
 
     fun getPreference(
         key: Preferences.Key<Long>,
-        default: Long = Long.empty()
+        default: Long = 0L
     ) = runBlocking {
         dataStore?.data?.first()?.toPreferences()?.get(key) ?: default
     }
 
     fun getPreference(
         key: Preferences.Key<Float>,
-        default: Float = Float.empty()
+        default: Float = 0F
     ) = runBlocking {
         dataStore?.data?.first()?.toPreferences()?.get(key) ?: default
     }
 
     fun getPreference(
         key: Preferences.Key<String>,
-        default: String = String.empty()
+        default: String = ""
     ) = runBlocking {
         dataStore?.data?.first()?.toPreferences()?.get(key) ?: default
     }
@@ -136,22 +128,22 @@ class DataStoreHelpers {
 
         fun DataStore<Preferences>.getValueSync(
             key: Preferences.Key<Int>,
-            default: Int = Int.empty()
+            default: Int = 0
         ) = runBlocking { data.first() }[key] ?: default
 
         fun DataStore<Preferences>.getValueSync(
             key: Preferences.Key<Long>,
-            default: Long = Long.empty()
+            default: Long = 0L
         ) = runBlocking { data.first() }[key] ?: default
 
         fun DataStore<Preferences>.getValueSync(
             key: Preferences.Key<Float>,
-            default: Float = Float.empty()
+            default: Float = 0F
         ) = runBlocking { data.first() }[key] ?: default
 
         fun DataStore<Preferences>.getValueSync(
             key: Preferences.Key<String>,
-            default: String = String.empty()
+            default: String = ""
         ) = runBlocking { data.first() }[key] ?: default
 
         fun DataStore<Preferences>.getValueSync(

@@ -14,7 +14,6 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
 class SharedPrefsHelpers {
-
     fun getInt(key: String, defaultValue: Int): Int =
         if (isKeyExists(key)) mSharedPreferences!!.getInt(key, defaultValue) else defaultValue
 
@@ -101,7 +100,7 @@ class SharedPrefsHelpers {
     }
 
     fun <T> setDataList(tag: String?, datalist: List<T>?) {
-        if (null == datalist || datalist.isEmpty()) return
+        if (datalist.isNullOrEmpty()) return
         val gson = Gson()
         val editor = mSharedPreferences!!.edit()
 
