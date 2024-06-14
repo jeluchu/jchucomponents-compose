@@ -4,7 +4,7 @@
  *
  */
 
-package com.jeluchu.jchucomponents.ktx.lists
+package com.jeluchu.jchucomponents.ui.extensions.lists
 
 import androidx.compose.foundation.MutatePriority
 import androidx.compose.foundation.lazy.LazyListState
@@ -22,7 +22,7 @@ fun LazyListState.disableScrolling(scope: CoroutineScope) {
 }
 
 /** Cancel the previous indefinite "scroll" blocking **/
-fun LazyListState.reenableScrolling(scope: CoroutineScope) {
+fun LazyListState.enableScrolling(scope: CoroutineScope) {
     scope.launch {
         scroll(scrollPriority = MutatePriority.PreventUserInput) {}
     }
