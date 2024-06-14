@@ -1,5 +1,5 @@
 [versions]
-jchucomponents = "2.0.0-dev1"
+jchucomponents = "2.0.0-dev2"
 agp = "8.4.2"
 kotlin = "2.0.0"
 dokka = "1.9.20"
@@ -76,11 +76,11 @@ core-squareup = [
     "com-squareup-retrofit2-converter-gson",
     "com-squareup-retrofit2-retrofit",
 ]
+# FOR JCHUCOMPONENTS KTX
 ktx-androidx = [
     "androidx-browser",
     "androidx-navigation-navigation-compose",
 ]
-# FOR JCHUCOMPONENTS KTX
 ktx-google = [
     "com-google-android-gms-play-services-base",
     "com-google-code-gson",
@@ -88,8 +88,7 @@ ktx-google = [
 
 # FOR JCHUCOMPONENTS QR
 qr-androidx = [
-    "androidx-core-core-ktx",
-    "androidx-compose-runtime",
+    "androidx-core-core-ktx"
 ]
 qr-third-party = [
     "com-squareup-okhttp3-okhttp",
@@ -118,7 +117,6 @@ ui-compose = [
 # FOR JCHUCOMPONENTS PAY
 pay-android = [
     "revenuecat",
-    "androidx-compose-runtime",
 ]
 pay-jetbrains = [
     "org-jetbrains-kotlinx-kotlinx-coroutines-android",
@@ -129,7 +127,6 @@ pay-jetbrains = [
 preferences-androidx = [
     "androidx-datastore",
     "androidx-preference",
-    "androidx-compose-runtime",
     "androidx-lifecycle-lifecycle-runtime-compose",
 ]
 preferences-google = [
