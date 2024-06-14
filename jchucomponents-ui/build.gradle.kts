@@ -49,8 +49,9 @@ android {
 
 dependencies {
     implementation(libs.bundles.ui.compose)
-    implementation(libs.bundles.ui.accompanist)
     implementation(libs.bundles.ui.androidx)
+    implementation(libs.bundles.ui.accompanist)
+    implementation(project(":jchucomponents-ktx"))
     debugImplementation(libs.androidx.compose.ui.ui.tooling.preview)
 }
 

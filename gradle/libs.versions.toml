@@ -1,5 +1,5 @@
 [versions]
-jchucomponents = "2.0.0-dev4"
+jchucomponents = "2.0.0-dev5"
 agp = "8.4.2"
 kotlin = "2.0.0"
 dokka = "1.9.20"
