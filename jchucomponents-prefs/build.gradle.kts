@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin)
     alias(libs.plugins.jetbrains.dokka)
+    alias(libs.plugins.compose.compiler)
     id("maven-publish")
 }
 
@@ -48,6 +49,7 @@ android {
 dependencies {
     implementation(libs.bundles.preferences.androidx)
     implementation(libs.bundles.preferences.google)
+    implementation(libs.bundles.preferences.compose)
 }
 
 publishing {
