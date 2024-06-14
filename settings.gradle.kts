@@ -17,13 +17,10 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "JchuComponents"
-include(
-        ":jchucomponents-core",
-        ":jchucomponents-ui",
-        ":jchucomponents-ktx",
-        ":jchucomponents-qr",
-        ":jchucomponents-pay",
-        ":jchucomponents-prefs",
-        "app"
-)
-
+include(":jchucomponents-core")
+include(":jchucomponents-ui")
+include(":jchucomponents-ktx")
+include(":jchucomponents-qr")
+include(":jchucomponents-pay")
+include(":jchucomponents-prefs")
+include("app")
