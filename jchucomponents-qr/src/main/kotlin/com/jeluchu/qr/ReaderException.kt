@@ -7,13 +7,8 @@
 package com.jeluchu.qr
 
 abstract class ReaderException : Exception {
-
     internal constructor()
     internal constructor(cause: Throwable?) : super(cause)
-
-    // Prevent stack traces from being taken
-    @Synchronized
-    override fun fillInStackTrace(): Throwable? = null
 
     companion object {
         // disable stack traces when not running inside test units
@@ -23,5 +18,4 @@ abstract class ReaderException : Exception {
         @JvmField
         val NO_TRACE = arrayOfNulls<StackTraceElement>(0)
     }
-
 }

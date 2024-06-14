@@ -2,6 +2,7 @@ package com.jeluchu.jchucomponents.ktx.numbers
 
 import java.math.BigDecimal
 import java.math.MathContext
+import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 
@@ -30,7 +31,7 @@ fun List<BigDecimal>.sum(): BigDecimal = if (this.isNotEmpty()) reduce { acc, it
 
 operator fun BigDecimal.div(int: Int) = this / int.toBigDecimal()
 
-fun BigDecimal.isZero() = setScale(0, BigDecimal.ROUND_UP) == BigDecimal.ZERO
+fun BigDecimal.isZero() = setScale(0, RoundingMode.UP) == BigDecimal.ZERO
 
 fun BigDecimal.safeDiv(n: BigDecimal, context: MathContext = MathContext.DECIMAL128): BigDecimal =
     this.divide(if (n.isZero()) BigDecimal.ONE else n, context)
