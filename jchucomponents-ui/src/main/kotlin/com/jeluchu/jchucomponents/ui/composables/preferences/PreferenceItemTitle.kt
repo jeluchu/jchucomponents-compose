@@ -47,12 +47,12 @@ internal fun PreferenceItemDescription(
     overflow: TextOverflow = TextOverflow.Ellipsis
 ) {
     Text(
-        modifier = modifier.padding(top = 2.dp),
         text = text,
+        style = style,
         maxLines = maxLines,
         fontSize = fontSize,
-        style = style,
-        color = color.opacity(enabled),
-        overflow = overflow
+        overflow = overflow,
+        color = color.copy(.4f),
+        modifier = modifier.padding(top = 2.dp)
     )
 }

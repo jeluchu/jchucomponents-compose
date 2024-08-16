@@ -16,6 +16,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
@@ -29,6 +30,8 @@ fun PreferenceItem(
     description: String? = null,
     icon: Any? = null,
     enabled: Boolean = true,
+    containerColor: Color = Color.White,
+    contentColor: Color = Color.DarkGray,
     onLongClickLabel: String? = null,
     onLongClick: (() -> Unit)? = null,
     onClickLabel: String? = null,
@@ -40,7 +43,8 @@ fun PreferenceItem(
         enabled = enabled,
         onLongClickLabel = onLongClickLabel,
         onLongClick = onLongClick
-    )
+    ),
+    color = containerColor
 ) {
     Row(
         modifier = Modifier
@@ -55,8 +59,8 @@ fun PreferenceItem(
                     contentDescription = null,
                     modifier = Modifier
                         .padding(start = 8.dp, end = 16.dp)
-                        .size(24.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant.opacity(enabled)
+                        .size(30.dp),
+                    tint = contentColor.opacity(enabled)
                 )
             }
 
@@ -66,16 +70,17 @@ fun PreferenceItem(
                     contentDescription = null,
                     modifier = Modifier
                         .padding(start = 8.dp, end = 16.dp)
-                        .size(24.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant.opacity(enabled)
+                        .size(30.dp),
+                    tint = contentColor.opacity(enabled)
                 )
             }
 
             is Int -> {
                 CircularProgressIndicator(
+                    color = contentColor,
                     modifier = Modifier
                         .padding(start = 8.dp, end = 16.dp)
-                        .size(24.dp)
+                        .size(30.dp)
                         .padding(2.dp)
                 )
             }
@@ -87,10 +92,16 @@ fun PreferenceItem(
                 .padding(horizontal = if (icon == null) 12.dp else 0.dp)
                 .padding(end = 8.dp)
         ) {
-            PreferenceItemTitle(text = title, enabled = enabled)
+            PreferenceItemTitle(
+                text = title,
+                enabled = enabled,
+                color = contentColor
+            )
+
             if (description != null) PreferenceItemDescription(
+                enabled = enabled,
                 text = description,
-                enabled = enabled
+                color = contentColor
             )
         }
     }
@@ -100,7 +111,14 @@ fun PreferenceItem(
 @Preview
 fun PreferenceItemPreview() {
     Column {
-        PreferenceItem(title = "title", description = "description", icon = 0, enabled = false)
+        PreferenceItem(
+            icon = 0,
+            enabled = false,
+            title = "title",
+            contentColor = Color.Black,
+            description = "description",
+            containerColor = Color.White
+        )
         PreferenceItem(title = "title", description = "description", icon = Icons.Outlined.Update)
     }
 }

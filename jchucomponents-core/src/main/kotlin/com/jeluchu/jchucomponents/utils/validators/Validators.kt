@@ -35,6 +35,9 @@ object Validators {
         get() =
             !TextUtils.isEmpty(this) && PatternsCompat.IP_ADDRESS.matcher(this).matches()
 
+    val String.isEmail: Boolean
+        get() = matches("^(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w+)+)\$".toRegex())
+
     val String.isPhone: Boolean
         get() =
             matches("^1([34578])\\d{9}\$".toRegex())

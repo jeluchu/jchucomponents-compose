@@ -1,5 +1,6 @@
 package com.jeluchu.jchucomponents.ui.composables.preferences
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,6 +19,7 @@ import androidx.compose.material3.SwitchDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -30,6 +32,8 @@ fun PreferenceSwitch(
     icon: ImageVector? = null,
     enabled: Boolean = true,
     isChecked: Boolean = true,
+    containerColor: Color = Color.White,
+    contentColor: Color = Color.DarkGray,
     colors: SwitchColors = SwitchDefaults.colors(),
     checkedIcon: ImageVector = Icons.Outlined.Check,
     onClick: (() -> Unit) = {},
@@ -45,9 +49,13 @@ fun PreferenceSwitch(
     } else null
 
     Surface(
-        modifier = Modifier.toggleable(value = isChecked,
-            enabled = enabled,
-            onValueChange = { onClick() })
+        modifier = Modifier
+            .toggleable(
+                value = isChecked,
+                enabled = enabled,
+                onValueChange = { onClick() }
+            ),
+        color = containerColor
     ) {
         Row(
             modifier = Modifier
@@ -62,18 +70,22 @@ fun PreferenceSwitch(
                     contentDescription = null,
                     modifier = Modifier
                         .padding(start = 8.dp, end = 16.dp)
-                        .size(24.dp),
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant.opacity(enabled)
+                        .size(30.dp),
+                    tint = contentColor.opacity(enabled)
                 )
             }
             Column(
                 modifier = Modifier.weight(1f)
             ) {
                 PreferenceItemTitle(
-                    text = title, enabled = enabled
+                    text = title,
+                    enabled = enabled,
+                    color = contentColor
                 )
                 if (!description.isNullOrEmpty()) PreferenceItemDescription(
-                    text = description, enabled = enabled
+                    enabled = enabled,
+                    text = description,
+                    color = contentColor
                 )
             }
             Switch(
@@ -105,6 +117,8 @@ fun PreferenceSwitchPreview() {
         title = "PreferenceSwitch",
         description = "Supporting text",
         icon = Icons.Outlined.ToggleOn,
+        containerColor = Color.White,
+        contentColor = Color.Black,
         enabled = false
     )
 }
