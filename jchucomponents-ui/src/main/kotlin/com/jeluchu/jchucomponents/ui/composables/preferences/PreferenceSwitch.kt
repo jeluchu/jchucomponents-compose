@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jeluchu.jchucomponents.ktx.colors.opacity
@@ -36,6 +37,8 @@ fun PreferenceSwitch(
     contentColor: Color = Color.DarkGray,
     colors: SwitchColors = SwitchDefaults.colors(),
     checkedIcon: ImageVector = Icons.Outlined.Check,
+    titleStyle: TextStyle = MaterialTheme.typography.titleLarge,
+    descriptionStyle: TextStyle = MaterialTheme.typography.bodyMedium,
     onClick: (() -> Unit) = {},
 ) {
     val thumbContent: (@Composable () -> Unit)? = if (isChecked) {
@@ -80,12 +83,14 @@ fun PreferenceSwitch(
                 PreferenceItemTitle(
                     text = title,
                     enabled = enabled,
+                    style = titleStyle,
                     color = contentColor
                 )
                 if (!description.isNullOrEmpty()) PreferenceItemDescription(
                     enabled = enabled,
                     text = description,
-                    color = contentColor
+                    color = contentColor,
+                    style = descriptionStyle
                 )
             }
             Switch(

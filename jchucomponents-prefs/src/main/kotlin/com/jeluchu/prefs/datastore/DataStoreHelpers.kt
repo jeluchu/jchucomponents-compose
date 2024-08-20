@@ -114,6 +114,10 @@ class DataStoreHelpers {
         dataStore?.data?.first()?.toPreferences()?.get(key) ?: default
     }
 
+    fun clearAllPreferences() = runBlocking {
+        dataStore?.edit { preferences -> preferences.clear() }
+    }
+
     companion object {
         var dataStore: DataStore<Preferences>? = null
         val Context.defaultPreferencesDataStore by preferencesDataStore(name = "default")

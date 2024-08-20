@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jeluchu.jchucomponents.ktx.colors.opacity
@@ -35,6 +36,8 @@ fun PreferenceItem(
     onLongClickLabel: String? = null,
     onLongClick: (() -> Unit)? = null,
     onClickLabel: String? = null,
+    titleStyle: TextStyle = MaterialTheme.typography.titleLarge,
+    descriptionStyle: TextStyle = MaterialTheme.typography.bodyMedium,
     onClick: () -> Unit = {},
 ) = Surface(
     modifier = Modifier.combinedClickable(
@@ -95,13 +98,15 @@ fun PreferenceItem(
             PreferenceItemTitle(
                 text = title,
                 enabled = enabled,
+                style = titleStyle,
                 color = contentColor
             )
 
             if (description != null) PreferenceItemDescription(
                 enabled = enabled,
                 text = description,
-                color = contentColor
+                color = contentColor,
+                style = descriptionStyle
             )
         }
     }
