@@ -19,7 +19,7 @@ import com.revenuecat.purchases.PurchasesErrorCode
 import com.revenuecat.purchases.getOfferingsWith
 import com.revenuecat.purchases.interfaces.PurchaseCallback
 import com.revenuecat.purchases.interfaces.ReceiveCustomerInfoCallback
-import com.revenuecat.purchases.models.GoogleProrationMode
+import com.revenuecat.purchases.models.GoogleReplacementMode
 import com.revenuecat.purchases.models.StoreTransaction
 import com.revenuecat.purchases.models.googleProduct
 import com.revenuecat.purchases.purchaseWith
@@ -298,7 +298,7 @@ class Payment {
                                         Purchases.sharedInstance.purchase(
                                             PurchaseParams.Builder(activity, product)
                                                 .oldProductId(monthlyProduct.product.googleProduct?.productId.orEmpty())
-                                                .googleProrationMode(GoogleProrationMode.IMMEDIATE_WITHOUT_PRORATION)
+                                                .googleReplacementMode(GoogleReplacementMode.WITHOUT_PRORATION)
                                                 .build(),
                                             object : PurchaseCallback {
                                                 override fun onCompleted(
@@ -322,7 +322,7 @@ class Payment {
                                         Purchases.sharedInstance.purchase(
                                             PurchaseParams.Builder(activity, product)
                                                 .oldProductId(annualProduct.product.googleProduct?.productId.orEmpty())
-                                                .googleProrationMode(GoogleProrationMode.IMMEDIATE_WITHOUT_PRORATION)
+                                                .googleReplacementMode(GoogleReplacementMode.WITHOUT_PRORATION)
                                                 .build(),
                                             object : PurchaseCallback {
                                                 override fun onCompleted(

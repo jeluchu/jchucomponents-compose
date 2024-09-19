@@ -1,5 +1,5 @@
 [versions]
-jchucomponents = "2.0.0-alpha17"
+jchucomponents = "2.0.0-alpha18"
 agp = "8.5.2"
 kotlin = "2.0.0"
 dokka = "1.9.20"
@@ -45,7 +45,7 @@ coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-kt" }
 org-jetbrains-kotlinx-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "org-jetbrains-kotlinx" }
 org-jetbrains-kotlinx-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "org-jetbrains-kotlinx" }
 androidx-appcompat = "androidx.appcompat:appcompat:1.7.0"
-revenuecat = "com.revenuecat.purchases:purchases:6.9.3"
+revenuecat = "com.revenuecat.purchases:purchases:8.7.2"
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
