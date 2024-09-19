@@ -71,3 +71,6 @@ fun Bitmap.scaleBitmap(maxBytes: Long = SIZE_2MB_BYTES.toLong()): Bitmap? {
     val newHeightPx = floor(currentHeight * scaleFactor).toInt()
     return Bitmap.createScaledBitmap(this, newWidthPx, newHeightPx, true)
 }
+
+internal val Bitmap.safeConfig: Bitmap.Config
+    get() = config ?: Bitmap.Config.ARGB_8888

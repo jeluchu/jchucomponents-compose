@@ -131,7 +131,7 @@ fun Toolbar(
             maxLines = 1
         )
     },
-    colors = TopAppBarDefaults.smallTopAppBarColors(
+    colors = TopAppBarDefaults.topAppBarColors(
         containerColor = topBarSettings.backgroundColor
     ),
     navigationIcon = {

@@ -149,6 +149,10 @@ fun NavGraphBuilder.toolbarsNav(nav: Destinations) {
         composable(Feature.CENTER_TOOBARS.nav) {
             CenterToolbarActionsPreview()
         }
+
+        composable(Feature.LARGE_TOOBARS.nav) {
+            // Soon
+        }
     }
 }
 

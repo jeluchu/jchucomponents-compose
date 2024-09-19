@@ -18,6 +18,9 @@ fun Int?.orEmpty(defaultValue: Int = Int.empty()) = this ?: defaultValue
 fun Int.isNotEmpty() = this != Int.empty()
 fun Long.bytesToMeg(): String = (this / (1024L * 1024L)).toString()
 
+fun Double.Companion.empty() = 0.0
+fun Double?.orEmpty(defaultValue: Double = Double.empty()): Double = this ?: defaultValue
+
 fun Float.Companion.empty() = 0f
 fun Float?.orEmpty(defaultValue: Float = Float.empty()): Float = this ?: defaultValue
 

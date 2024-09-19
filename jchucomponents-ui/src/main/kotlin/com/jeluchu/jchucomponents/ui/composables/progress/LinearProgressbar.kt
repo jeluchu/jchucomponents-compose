@@ -44,7 +44,6 @@ import com.jeluchu.jchucomponents.ui.extensions.toPainter
 import com.jeluchu.jchucomponents.ktx.strings.empty
 import com.jeluchu.jchucomponents.ui.R
 import com.jeluchu.jchucomponents.ui.extensions.modifier.cornerRadius
-import com.jeluchu.jchucomponents.ui.foundation.text.AutoSizeText
 import com.jeluchu.jchucomponents.ui.runtime.remember.rememberMutableStateOf
 import com.jeluchu.jchucomponents.ui.themes.cosmicLatte
 import com.jeluchu.jchucomponents.ui.themes.darkGreen
@@ -148,14 +147,13 @@ fun LinearProgressbar(
             contentColor = if (enabled) linearProgressCounter.content
             else linearProgressCounter.disabledContent
         ) {
-            AutoSizeText(
+            Text(
                 modifier = Modifier.padding(
                     vertical = 2.dp,
                     horizontal = 8.dp
                 ),
                 text = if (enabled) "${numberTimes.toInt()}/${maxNumber.toInt()}" else "- / -",
                 style = style,
-                maxTextSize = 14.sp,
                 textAlign = TextAlign.Center,
             )
         }
@@ -260,14 +258,13 @@ fun LinearProgressbar(
             contentColor = if (enabled) linearProgressCounter.content
             else linearProgressCounter.disabledContent
         ) {
-            AutoSizeText(
+            Text(
                 modifier = Modifier.padding(
                     vertical = 2.dp,
                     horizontal = 8.dp
                 ),
                 text = if (enabled) "${numberTimes.toInt()}/${maxNumber.toInt()}" else "- / -",
                 style = style,
-                maxTextSize = 14.sp,
                 textAlign = TextAlign.Center,
             )
         }
@@ -275,7 +272,7 @@ fun LinearProgressbar(
 }
 
 @Immutable
-class LinearProgressCustom constructor(
+class LinearProgressCustom(
     val disabledIndicator: Color = milky.copy(.2f),
     val backgroundIndicator: Color = Color.LightGray.copy(.3f),
     val foregroundIndicator: Color = milky,

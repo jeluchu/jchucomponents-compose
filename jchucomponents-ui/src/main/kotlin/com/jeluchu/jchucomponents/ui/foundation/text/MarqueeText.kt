@@ -13,10 +13,10 @@ import androidx.compose.animation.core.TargetBasedAnimation
 import androidx.compose.animation.core.VectorConverter
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.DefaultMarqueeDelayMillis
-import androidx.compose.foundation.DefaultMarqueeVelocity
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.MarqueeAnimationMode
+import androidx.compose.foundation.MarqueeDefaults.RepeatDelayMillis
+import androidx.compose.foundation.MarqueeDefaults.Velocity
 import androidx.compose.foundation.MarqueeSpacing
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
@@ -276,9 +276,9 @@ fun MarqueeText(
     iterations: Int = Int.MAX_VALUE,
     edgeWidthGradient: Dp = 10.dp,
     marqueeSpacing: MarqueeSpacing = MarqueeSpacing(30.dp),
-    delayMillis: Int = DefaultMarqueeDelayMillis,
+    delayMillis: Int = RepeatDelayMillis,
     animationMode: MarqueeAnimationMode = MarqueeAnimationMode.Immediately,
-    velocity: Dp = DefaultMarqueeVelocity,
+    velocity: Dp = Velocity,
     maxLines: Int = Int.MAX_VALUE,
     onTextLayout: (TextLayoutResult) -> Unit = {},
     style: TextStyle = LocalTextStyle.current
@@ -295,7 +295,7 @@ fun MarqueeText(
         .basicMarquee(
             animationMode = animationMode,
             iterations = iterations,
-            delayMillis = delayMillis,
+            repeatDelayMillis = delayMillis,
             spacing = marqueeSpacing,
             velocity = velocity
         ),
@@ -335,9 +335,9 @@ fun MarqueeText(
     iterations: Int = Int.MAX_VALUE,
     edgeWidthGradient: Dp = 10.dp,
     marqueeSpacing: MarqueeSpacing = MarqueeSpacing(30.dp),
-    delayMillis: Int = DefaultMarqueeDelayMillis,
+    delayMillis: Int = RepeatDelayMillis,
     animationMode: MarqueeAnimationMode = MarqueeAnimationMode.Immediately,
-    velocity: Dp = DefaultMarqueeVelocity,
+    velocity: Dp = Velocity,
     maxLines: Int = Int.MAX_VALUE,
     onTextLayout: (TextLayoutResult) -> Unit = {},
     style: TextStyle = LocalTextStyle.current
@@ -353,7 +353,7 @@ fun MarqueeText(
         .basicMarquee(
             animationMode = animationMode,
             iterations = iterations,
-            delayMillis = delayMillis,
+            repeatDelayMillis = delayMillis,
             spacing = marqueeSpacing,
             velocity = velocity
         ),

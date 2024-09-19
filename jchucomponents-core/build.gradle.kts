@@ -7,11 +7,11 @@ plugins {
 
 android {
     namespace = "com.jeluchu.jchucomponents.core"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 35
         proguardFiles(
             getDefaultProguardFile("proguard-android-optimize.txt"),
             "proguard-rules.pro"
