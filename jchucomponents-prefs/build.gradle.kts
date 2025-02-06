@@ -49,6 +49,7 @@ android {
 dependencies {
     implementation(libs.bundles.preferences.androidx)
     implementation(libs.bundles.preferences.google)
+    implementation(platform(libs.compose.bom))
     implementation(libs.bundles.preferences.compose)
 }
 

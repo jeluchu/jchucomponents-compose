@@ -13,9 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.DefaultAlpha
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import coil.compose.AsyncImage
-import coil.request.ImageRequest
-import coil.transform.Transformation
+import coil3.compose.AsyncImage
+import coil3.request.ImageRequest
+import coil3.request.allowHardware
+import coil3.request.crossfade
+import coil3.request.transformations
+import coil3.transform.Transformation
 import com.jeluchu.jchucomponents.ui.extensions.toPainter
 import com.jeluchu.jchucomponents.ui.R
 
@@ -59,7 +62,6 @@ fun NetworkImage(
         .transformations(transformations)
         .crossfade(isCrossfade)
         .allowHardware(isAllowHardware)
-        .error(error)
         .build(),
     alpha = alpha,
     placeholder = loading.toPainter(),

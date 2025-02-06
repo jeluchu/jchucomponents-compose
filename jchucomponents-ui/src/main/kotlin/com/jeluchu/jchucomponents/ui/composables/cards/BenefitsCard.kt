@@ -66,7 +66,9 @@ fun BenefitsCard(
     }
 
     Column(
-        modifier = Modifier.weight(1f)
+        modifier = Modifier.weight(1f),
+        horizontalAlignment = Alignment.Start,
+        verticalArrangement = Arrangement.spacedBy(5.dp)
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
@@ -81,14 +83,15 @@ fun BenefitsCard(
 
             if (benefitsDefaults.isNew) {
                 Surface(
-                    shape = 5.cornerRadius(),
+                    shape = 7.cornerRadius(),
                     color = benefitsDefaults.colors.badgeContainerColor
                 ) {
                     Text(
                         text = "New",
                         fontSize = 16.sp,
                         modifier = Modifier.padding(
-                            horizontal = 5.dp
+                            vertical = 3.dp,
+                            horizontal = 9.dp
                         ),
                         fontWeight = FontWeight.ExtraBold,
                         color = benefitsDefaults.colors.badgeContentColor
@@ -101,6 +104,7 @@ fun BenefitsCard(
         description?.let { description ->
             Text(
                 fontSize = 12.sp,
+                lineHeight = 17.sp,
                 text = description,
                 color = benefitsDefaults.colors.contentColor.copy(.7f),
             )

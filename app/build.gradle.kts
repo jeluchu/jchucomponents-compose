@@ -35,7 +35,8 @@ android {
 }
 
 dependencies {
-    implementation(libs.bundles.ui.compose)
+    implementation(platform(libs.compose.bom))
+    implementation(libs.bundles.compose.bom)
     implementation(libs.androidx.appcompat)
     implementation(project(":jchucomponents-core"))
     implementation(project(":jchucomponents-ui"))

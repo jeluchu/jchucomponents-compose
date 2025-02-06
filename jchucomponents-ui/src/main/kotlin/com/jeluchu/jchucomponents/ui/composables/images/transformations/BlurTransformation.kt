@@ -1,8 +1,8 @@
 package com.jeluchu.jchucomponents.ui.composables.images.transformations
 
 import android.graphics.Bitmap
-import coil.size.Size
-import coil.transform.Transformation
+import coil3.size.Size
+import coil3.transform.Transformation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlin.math.abs
@@ -11,7 +11,7 @@ import kotlin.math.roundToInt
 class BlurTransformation(
     private val radius: Int = 25,
     private val scale: Float = 0.5f
-) : Transformation {
+) : Transformation() {
 
     override val cacheKey: String = "${javaClass.name}-$radius"
 

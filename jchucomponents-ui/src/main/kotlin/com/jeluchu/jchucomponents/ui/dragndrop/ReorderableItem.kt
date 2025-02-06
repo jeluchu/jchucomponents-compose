@@ -23,7 +23,6 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.zIndex
 import com.jeluchu.jchucomponents.ui.dragndrop.states.ReorderableState
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun LazyItemScope.ReorderableItem(
     reorderableState: ReorderableState<*>,
@@ -36,13 +35,12 @@ fun LazyItemScope.ReorderableItem(
     state = reorderableState,
     key = key,
     modifier = modifier,
-    defaultDraggingModifier = Modifier.animateItemPlacement(),
+    defaultDraggingModifier = Modifier.animateItem(),
     orientationLocked = orientationLocked,
     index = index,
     content = content
 )
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun LazyGridItemScope.ReorderableItem(
     reorderableState: ReorderableState<*>,
@@ -54,7 +52,7 @@ fun LazyGridItemScope.ReorderableItem(
     state = reorderableState,
     key = key,
     modifier = modifier,
-    defaultDraggingModifier = Modifier.animateItemPlacement(),
+    defaultDraggingModifier = Modifier.animateItem(),
     orientationLocked = false,
     index = index,
     content = content
