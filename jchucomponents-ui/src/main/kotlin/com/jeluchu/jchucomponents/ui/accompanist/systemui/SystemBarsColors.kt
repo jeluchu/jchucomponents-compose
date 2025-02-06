@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Color
  *
  */
 
+@Deprecated("Deprecated SystemStatusBarColors, replace with enableEdgeToEdge")
 @Composable
 fun SystemStatusBarColors(
     statusBarColor: Color,
