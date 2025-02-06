@@ -1,6 +1,7 @@
 [versions]
-jchucomponents = "2.0.1"
+jchucomponents = "2.0.2"
 agp = "8.5.2"
+ktor="3.0.3"
 kotlin = "2.1.10"
 dokka = "1.9.20"
 androidx-activity = "1.10.0"
@@ -41,11 +42,13 @@ com-squareup-okhttp3-okhttp = { module = "com.squareup.okhttp3:okhttp", version.
 com-squareup-retrofit2-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "com-squareup-retrofit2" }
 com-squareup-retrofit2-retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "com-squareup-retrofit2" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil-kt" }
+coil-compose-ktor = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil-kt" }
 org-jetbrains-kotlinx-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "org-jetbrains-kotlinx" }
 org-jetbrains-kotlinx-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "org-jetbrains-kotlinx" }
 androidx-appcompat = "androidx.appcompat:appcompat:1.7.0"
 revenuecat = "com.revenuecat.purchases:purchases:8.10.4"
 compose-bom = { group = "androidx.compose", name ="compose-bom", version.ref = "composeBom" }
+ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -90,6 +93,9 @@ qr-third-party = [
 ui-androidx = [
     "androidx-core-core-splashscreen",
 ]
+ktor = [
+    "ktor-android"
+]
 compose-bom = [
     "androidx-activity-activity-compose",
     "androidx-compose-animation",
@@ -103,6 +109,7 @@ compose-bom = [
     "androidx-compose-ui-ui-tooling",
     "androidx-navigation-navigation-compose",
     "coil-compose",
+    "coil-compose-ktor"
 ]
 # FOR JCHUCOMPONENTS PAY
 pay-android = [
